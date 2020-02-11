@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luis Barona-Fong | Jose Andres (JA) Calvache</title>
+    <link>/authors/luis-barona-fong/</link>
+      <atom:link href="/authors/luis-barona-fong/index.xml" rel="self" type="application/rss+xml" />
+    <description>Luis Barona-Fong</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Luis Barona-Fong</title>
+      <link>/authors/luis-barona-fong/</link>
+    </image>
+    
+    <item>
+      <title>Assessing the completeness of reporting of observational studies in Colombian Journal of Anesthesiology. Cross sectional study</title>
+      <link>/publication/content/publication/bravo-pena-assessing-2017/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>/publication/content/publication/bravo-pena-assessing-2017/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

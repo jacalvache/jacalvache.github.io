@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Juan Camilo Gómez | Jose Andres (JA) Calvache</title>
+    <link>/authors/juan-camilo-gomez/</link>
+      <atom:link href="/authors/juan-camilo-gomez/index.xml" rel="self" type="application/rss+xml" />
+    <description>Juan Camilo Gómez</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Juan Camilo Gómez</title>
+      <link>/authors/juan-camilo-gomez/</link>
+    </image>
+    
+    <item>
+      <title>The reflection paper</title>
+      <link>/publication/content/publication/gomez-reflection-2018/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/content/publication/gomez-reflection-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

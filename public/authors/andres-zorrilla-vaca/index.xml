@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrés Zorrilla-Vaca | Jose Andres (JA) Calvache</title>
+    <link>/authors/andres-zorrilla-vaca/</link>
+      <atom:link href="/authors/andres-zorrilla-vaca/index.xml" rel="self" type="application/rss+xml" />
+    <description>Andrés Zorrilla-Vaca</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Andrés Zorrilla-Vaca</title>
+      <link>/authors/andres-zorrilla-vaca/</link>
+    </image>
+    
+    <item>
+      <title>Ultrasound guidance for central venous catheterisation. A Colombian national survey</title>
+      <link>/publication/content/publication/calvache-ultrasound-2018/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/content/publication/calvache-ultrasound-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

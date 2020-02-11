@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jorge Iván Puerta-Guarín | Jose Andres (JA) Calvache</title>
+    <link>/authors/jorge-ivan-puerta-guarin/</link>
+      <atom:link href="/authors/jorge-ivan-puerta-guarin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jorge Iván Puerta-Guarín</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Jorge Iván Puerta-Guarín</title>
+      <link>/authors/jorge-ivan-puerta-guarin/</link>
+    </image>
+    
+    <item>
+      <title>Inter-rater and intra-rater reliability of the airway diameter measured by sonography</title>
+      <link>/publication/content/publication/gomez-tamayo-inter-rater-2018/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>/publication/content/publication/gomez-tamayo-inter-rater-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
