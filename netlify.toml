@@ -24,3 +24,5 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
+
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
