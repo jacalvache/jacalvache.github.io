@@ -3,17 +3,17 @@ main:
 #  - title: "Talks"
 #    url: /talks/    
 
-  - title: "Teaching"
-    url: /teaching/    
+#  - title: "Teaching"
+#    url: /teaching/    
 
-  - title: "Publications"
-    url: /publications/
+#  - title: "Publications"
+#    url: /publications/
 
-  - title: "CV"
-    url: /cv/
+#  - title: "CV"
+#    url: /cv/
 
   - title: "Epiclin Unicauca"
-    url: /http://epiclin.unicauca.edu.co/
+    url: /http://www.epiclin.unicauca.edu.co/
         
 #  - title: "Blog Posts"
 #    url: /year-archive/
