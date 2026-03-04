@@ -187,7 +187,7 @@ Attaching package: 'dplyr'</code></pre>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(summarytools)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in fun(libname, pkgname): couldn't connect to display
-"/private/tmp/com.apple.launchd.iGR9EbHhvo/org.xquartz:0"</code></pre>
+"/private/tmp/com.apple.launchd.0vD4F0w3q8/org.xquartz:0"</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>system might not have X11 capabilities; in case of errors when using dfSummary(), set st_options(use.x11 = FALSE)</code></pre>
@@ -228,14 +228,13 @@ Attaching package: 'broom.helpers'</code></pre>
 • `` -&gt; `...19`
 • `` -&gt; `...20`
 • `` -&gt; `...21`
-• `` -&gt; `...46`
 • `` -&gt; `...47`
 • `` -&gt; `...48`
 • `` -&gt; `...49`
 • `` -&gt; `...50`
 • `` -&gt; `...51`
 • `` -&gt; `...52`
-• `` -&gt; `...94`
+• `` -&gt; `...53`
 • `` -&gt; `...95`
 • `` -&gt; `...96`
 • `` -&gt; `...97`
@@ -248,14 +247,15 @@ Attaching package: 'broom.helpers'</code></pre>
 • `` -&gt; `...104`
 • `` -&gt; `...105`
 • `` -&gt; `...106`
-• `` -&gt; `...107`</code></pre>
+• `` -&gt; `...107`
+• `` -&gt; `...108`</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data_orig <span class="ot">&lt;-</span> data</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dfSummary</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Data Frame Summary  
 data  
-Dimensions: 546 x 107  
+Dimensions: 546 x 108  
 Duplicates: 0  
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -421,46 +421,55 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
                     IQR (CV) : 11 (0)                                                         : :                         
                                                                                     . . . : : : :                         
 
-27    tratam        1. No                                36 ( 6.6%)           I                      546        0         
+27    charlson      Mean (sd) : 1.2 (1.2)               0 : 169 (31.0%)       IIIIII                 546        0         
+      [numeric]     min &lt; med &lt; max:                    1 : 173 (31.7%)       IIIIII                 (100.0%)   (0.0%)    
+                    0 &lt; 1 &lt; 8                           2 : 148 (27.1%)       IIIII                                       
+                    IQR (CV) : 2 (1)                    3 :  39 ( 7.1%)       I                                           
+                                                        4 :   9 ( 1.6%)                                                   
+                                                        6 :   6 ( 1.1%)                                                   
+                                                        7 :   1 ( 0.2%)                                                   
+                                                        8 :   1 ( 0.2%)                                                   
+
+28    tratam        1. No                                36 ( 6.6%)           I                      546        0         
       [character]   2. Si tengo tratamiento             510 (93.4%)           IIIIIIIIIIIIIIIIII     (100.0%)   (0.0%)    
 
-28    onco          1. No                               426 (78.0%)           IIIIIIIIIIIIIII        546        0         
+29    onco          1. No                               426 (78.0%)           IIIIIIIIIIIIIII        546        0         
       [character]   2. Si                               120 (22.0%)           IIII                   (100.0%)   (0.0%)    
 
-29    onco_estad    1. Desconocido                      32 (26.7%)            IIIII                  120        426       
+30    onco_estad    1. Desconocido                      32 (26.7%)            IIIII                  120        426       
       [character]   2. I                                 7 ( 5.8%)            I                      (22.0%)    (78.0%)   
                     3. II                               18 (15.0%)            III                                         
                     4. III                              18 (15.0%)            III                                         
                     5. IV                               33 (27.5%)            IIIII                                       
                     6. No aplica                        12 (10.0%)            II                                          
 
-30    onco_meta     1. Ausentes                         33 (27.5%)            IIIII                  120        426       
+31    onco_meta     1. Ausentes                         33 (27.5%)            IIIII                  120        426       
       [character]   2. Desconocido                      51 (42.5%)            IIIIIIII               (22.0%)    (78.0%)   
                     3. No aplica                         3 ( 2.5%)                                                        
                     4. Presentes                        33 (27.5%)            IIIII                                       
 
-31    onco_qx       1. Checked                           53 ( 9.7%)           I                      546        0         
+32    onco_qx       1. Checked                           53 ( 9.7%)           I                      546        0         
       [character]   2. Unchecked                        493 (90.3%)           IIIIIIIIIIIIIIIIII     (100.0%)   (0.0%)    
 
-32    onco_radio    1. Checked                           20 ( 3.7%)                                  546        0         
+33    onco_radio    1. Checked                           20 ( 3.7%)                                  546        0         
       [character]   2. Unchecked                        526 (96.3%)           IIIIIIIIIIIIIIIIIII    (100.0%)   (0.0%)    
 
-33    onco_cp       1. Checked                           26 ( 4.8%)                                  546        0         
+34    onco_cp       1. Checked                           26 ( 4.8%)                                  546        0         
       [character]   2. Unchecked                        520 (95.2%)           IIIIIIIIIIIIIIIIIII    (100.0%)   (0.0%)    
 
-34    onco_cx       1. Checked                           44 ( 8.1%)           I                      546        0         
+35    onco_cx       1. Checked                           44 ( 8.1%)           I                      546        0         
       [character]   2. Unchecked                        502 (91.9%)           IIIIIIIIIIIIIIIIII     (100.0%)   (0.0%)    
 
-35    onco_inm      1. Checked                           10 ( 1.8%)                                  546        0         
+36    onco_inm      1. Checked                           10 ( 1.8%)                                  546        0         
       [character]   2. Unchecked                        536 (98.2%)           IIIIIIIIIIIIIIIIIII    (100.0%)   (0.0%)    
 
-36    onco_alt      1. Checked                           19 ( 3.5%)                                  546        0         
+37    onco_alt      1. Checked                           19 ( 3.5%)                                  546        0         
       [character]   2. Unchecked                        527 (96.5%)           IIIIIIIIIIIIIIIIIII    (100.0%)   (0.0%)    
 
-37    onco_no       1. Checked                           25 ( 4.6%)                                  546        0         
+38    onco_no       1. Checked                           25 ( 4.6%)                                  546        0         
       [character]   2. Unchecked                        521 (95.4%)           IIIIIIIIIIIIIIIIIII    (100.0%)   (0.0%)    
 
-38    ecog          1. 0                                11 ( 9.2%)            I                      120        426       
+39    ecog          1. 0                                11 ( 9.2%)            I                      120        426       
       [character]   2. 1                                32 (26.7%)            IIIII                  (22.0%)    (78.0%)   
                     3. 2                                30 (25.0%)            IIIII                                       
                     4. 3                                32 (26.7%)            IIIII                                       
@@ -468,286 +477,286 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
                     6. Desconocido                       1 ( 0.8%)                                                        
                     7. No aplica                         1 ( 0.8%)                                                        
 
-39    karno         Mean (sd) : 74.5 (18.6)             14 distinct values                . :        546        0         
+40    karno         Mean (sd) : 74.5 (18.6)             14 distinct values                . :        546        0         
       [numeric]     min &lt; med &lt; max:                                                      : :        (100.0%)   (0.0%)    
                     10 &lt; 80 &lt; 100                                                       : : :                             
                     IQR (CV) : 30 (0.2)                                             : : : : : :                           
                                                                               . . : : : : : : :                           
 
-40    sarc1         1. Alguna                           190 (34.8%)           IIIIII                 546        0         
+41    sarc1         1. Alguna                           190 (34.8%)           IIIIII                 546        0         
       [character]   2. Mucha o incapaz                  150 (27.5%)           IIIII                  (100.0%)   (0.0%)    
                     3. Ninguna                          206 (37.7%)           IIIIIII                                     
 
-41    sarc2         1. Alguna                           168 (30.8%)           IIIIII                 546        0         
+42    sarc2         1. Alguna                           168 (30.8%)           IIIIII                 546        0         
       [character]   2. Mucha, usando auxiliares         132 (24.2%)           IIII                   (100.0%)   (0.0%)    
                     3. Ninguna                          246 (45.1%)           IIIIIIIII                                   
 
-42    sarc3         1. Alguna                           181 (33.2%)           IIIIII                 546        0         
+43    sarc3         1. Alguna                           181 (33.2%)           IIIIII                 546        0         
       [character]   2. Mucha, o incapaz sin ayud        117 (21.4%)           IIII                   (100.0%)   (0.0%)    
                     3. Ninguna                          248 (45.4%)           IIIIIIIII                                   
 
-43    sarc4         1. Alguna                           214 (39.2%)           IIIIIII                546        0         
+44    sarc4         1. Alguna                           214 (39.2%)           IIIIIII                546        0         
       [character]   2. Mucha o incapaz                  177 (32.4%)           IIIIII                 (100.0%)   (0.0%)    
                     3. Ninguna                          155 (28.4%)           IIIII                                       
 
-44    sarc5         1. 1 a 3 caídas                     199 (36.4%)           IIIIIII                546        0         
+45    sarc5         1. 1 a 3 caídas                     199 (36.4%)           IIIIIII                546        0         
       [character]   2. 4 o más caídas                    22 ( 4.0%)                                  (100.0%)   (0.0%)    
                     3. Ninguna                          325 (59.5%)           IIIIIIIIIII                                 
 
-45    sarcf         All NA's                                                                         0          546       
+46    sarcf         All NA's                                                                         0          546       
       [logical]                                                                                      (0.0%)     (100.0%)  
 
-46    ...46         1. No                                70 (12.8%)           II                     546        0         
+47    ...47         1. No                                70 (12.8%)           II                     546        0         
       [character]   2. Si                               476 (87.2%)           IIIIIIIIIIIIIIIII      (100.0%)   (0.0%)    
 
-47    ...47         1. No                               314 (57.5%)           IIIIIIIIIII            546        0         
+48    ...48         1. No                               314 (57.5%)           IIIIIIIIIII            546        0         
       [character]   2. Si                               232 (42.5%)           IIIIIIII               (100.0%)   (0.0%)    
 
-48    ...48         1. No                               276 (50.5%)           IIIIIIIIII             546        0         
+49    ...49         1. No                               276 (50.5%)           IIIIIIIIII             546        0         
       [character]   2. Si                               270 (49.5%)           IIIIIIIII              (100.0%)   (0.0%)    
 
-49    ...49         1. No                               399 (73.1%)           IIIIIIIIIIIIII         546        0         
+50    ...50         1. No                               399 (73.1%)           IIIIIIIIIIIIII         546        0         
       [character]   2. Si                               147 (26.9%)           IIIII                  (100.0%)   (0.0%)    
 
-50    ...50         1. No                               462 (84.6%)           IIIIIIIIIIIIIIII       546        0         
+51    ...51         1. No                               462 (84.6%)           IIIIIIIIIIIIIIII       546        0         
       [character]   2. Si                                84 (15.4%)           III                    (100.0%)   (0.0%)    
 
-51    ...51         1. No                                49 ( 9.0%)           I                      544        2         
+52    ...52         1. No                                49 ( 9.0%)           I                      544        2         
       [character]   2. Si                               495 (91.0%)           IIIIIIIIIIIIIIIIII     (99.6%)    (0.4%)    
 
-52    ...52         1. No                               167 (53.5%)           IIIIIIIIII             312        234       
+53    ...53         1. No                               167 (53.5%)           IIIIIIIIII             312        234       
       [character]   2. Si                               145 (46.5%)           IIIIIIIII              (57.1%)    (42.9%)   
 
-53    s2            1. Bastante                         188 (34.4%)           IIIIII                 546        0         
+54    s2            1. Bastante                         188 (34.4%)           IIIIII                 546        0         
       [character]   2. Mucho                            124 (22.7%)           IIII                   (100.0%)   (0.0%)    
                     3. Nada                             123 (22.5%)           IIII                                        
                     4. Un poco                          111 (20.3%)           IIII                                        
 
-54    s3            1. Bastante                          53 ( 9.7%)           I                      546        0         
+55    s3            1. Bastante                          53 ( 9.7%)           I                      546        0         
       [character]   2. Mucho                             10 ( 1.8%)                                  (100.0%)   (0.0%)    
                     3. Nada                             326 (59.7%)           IIIIIIIIIII                                 
                     4. Un poco                          157 (28.8%)           IIIII                                       
 
-55    s4            1. Bastante                          64 (11.7%)           II                     546        0         
+56    s4            1. Bastante                          64 (11.7%)           II                     546        0         
       [character]   2. Mucho                             27 ( 4.9%)                                  (100.0%)   (0.0%)    
                     3. Nada                             293 (53.7%)           IIIIIIIIII                                  
                     4. Un poco                          162 (29.7%)           IIIII                                       
 
-56    s5            1. Bastante                          88 (16.2%)           III                    544        2         
+57    s5            1. Bastante                          88 (16.2%)           III                    544        2         
       [character]   2. Mucho                             31 ( 5.7%)           I                      (99.6%)    (0.4%)    
                     3. Nada                             284 (52.2%)           IIIIIIIIII                                  
                     4. Un poco                          141 (25.9%)           IIIII                                       
 
-57    s6            1. Bastante                          27 ( 4.9%)                                  546        0         
+58    s6            1. Bastante                          27 ( 4.9%)                                  546        0         
       [character]   2. Mucho                              4 ( 0.7%)                                  (100.0%)   (0.0%)    
                     3. Nada                             474 (86.8%)           IIIIIIIIIIIIIIIII                           
                     4. Un poco                           41 ( 7.5%)           I                                           
 
-58    s7            1. Bastante                          80 (14.7%)           II                     546        0         
+59    s7            1. Bastante                          80 (14.7%)           II                     546        0         
       [character]   2. Mucho                             16 ( 2.9%)                                  (100.0%)   (0.0%)    
                     3. Nada                             310 (56.8%)           IIIIIIIIIII                                 
                     4. Un poco                          140 (25.6%)           IIIII                                       
 
-59    s8            1. Bastante                          75 (13.8%)           II                     545        1         
+60    s8            1. Bastante                          75 (13.8%)           II                     545        1         
       [character]   2. Mucho                             13 ( 2.4%)                                  (99.8%)    (0.2%)    
                     3. Nada                             311 (57.1%)           IIIIIIIIIII                                 
                     4. Un poco                          146 (26.8%)           IIIII                                       
 
-60    s9            1. Bastante                          78 (14.3%)           II                     546        0         
+61    s9            1. Bastante                          78 (14.3%)           II                     546        0         
       [character]   2. Mucho                             21 ( 3.8%)                                  (100.0%)   (0.0%)    
                     3. Nada                             287 (52.6%)           IIIIIIIIII                                  
                     4. Un poco                          160 (29.3%)           IIIII                                       
 
-61    s10           1. Bastante                          52 ( 9.5%)           I                      546        0         
+62    s10           1. Bastante                          52 ( 9.5%)           I                      546        0         
       [character]   2. Mucho                             22 ( 4.0%)                                  (100.0%)   (0.0%)    
                     3. Nada                             353 (64.7%)           IIIIIIIIIIII                                
                     4. Un poco                          119 (21.8%)           IIII                                        
 
-62    s11           1. Bastante                          99 (18.1%)           III                    546        0         
+63    s11           1. Bastante                          99 (18.1%)           III                    546        0         
       [character]   2. Mucho                             36 ( 6.6%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             232 (42.5%)           IIIIIIII                                    
                     4. Un poco                          179 (32.8%)           IIIIII                                      
 
-63    s12           1. Bastante                          45 ( 8.2%)           I                      546        0         
+64    s12           1. Bastante                          45 ( 8.2%)           I                      546        0         
       [character]   2. Mucho                             20 ( 3.7%)                                  (100.0%)   (0.0%)    
                     3. Nada                             380 (69.6%)           IIIIIIIIIIIII                               
                     4. Un poco                          101 (18.5%)           III                                         
 
-64    s13           1. Bastante                         156 (28.6%)           IIIII                  545        1         
+65    s13           1. Bastante                         156 (28.6%)           IIIII                  545        1         
       [character]   2. Mucho                             48 ( 8.8%)           I                      (99.8%)    (0.2%)    
                     3. Nada                             167 (30.6%)           IIIIII                                      
                     4. Un poco                          174 (31.9%)           IIIIII                                      
 
-65    s14           1. Bastante                         181 (33.2%)           IIIIII                 546        0         
+66    s14           1. Bastante                         181 (33.2%)           IIIIII                 546        0         
       [character]   2. Mucho                             55 (10.1%)           II                     (100.0%)   (0.0%)    
                     3. Nada                             118 (21.6%)           IIII                                        
                     4. Un poco                          192 (35.2%)           IIIIIII                                     
 
-66    s15           1. Bastante                         134 (24.5%)           IIII                   546        0         
+67    s15           1. Bastante                         134 (24.5%)           IIII                   546        0         
       [character]   2. Mucho                             63 (11.5%)           II                     (100.0%)   (0.0%)    
                     3. Nada                             174 (31.9%)           IIIIII                                      
                     4. Un poco                          175 (32.1%)           IIIIII                                      
 
-67    s16           1. Bastante                         101 (18.5%)           III                    546        0         
+68    s16           1. Bastante                         101 (18.5%)           III                    546        0         
       [character]   2. Mucho                             24 ( 4.4%)                                  (100.0%)   (0.0%)    
                     3. Nada                             223 (40.8%)           IIIIIIII                                    
                     4. Un poco                          198 (36.3%)           IIIIIII                                     
 
-68    s17           1. Bastante                         105 (19.3%)           III                    545        1         
+69    s17           1. Bastante                         105 (19.3%)           III                    545        1         
       [character]   2. Mucho                             26 ( 4.8%)                                  (99.8%)    (0.2%)    
                     3. Nada                             263 (48.3%)           IIIIIIIII                                   
                     4. Un poco                          151 (27.7%)           IIIII                                       
 
-69    s18           1. Bastante                         124 (22.7%)           IIII                   546        0         
+70    s18           1. Bastante                         124 (22.7%)           IIII                   546        0         
       [character]   2. Mucho                             35 ( 6.4%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             207 (37.9%)           IIIIIII                                     
                     4. Un poco                          180 (33.0%)           IIIIII                                      
 
-70    s19           1. Bastante                          22 ( 4.0%)                                  546        0         
+71    s19           1. Bastante                          22 ( 4.0%)                                  546        0         
       [character]   2. Mucho                             11 ( 2.0%)                                  (100.0%)   (0.0%)    
                     3. Nada                             426 (78.0%)           IIIIIIIIIIIIIII                             
                     4. Un poco                           87 (15.9%)           III                                         
 
-71    s20           1. Bastante                          91 (16.7%)           III                    546        0         
+72    s20           1. Bastante                          91 (16.7%)           III                    546        0         
       [character]   2. Mucho                             32 ( 5.9%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             297 (54.4%)           IIIIIIIIII                                  
                     4. Un poco                          126 (23.1%)           IIII                                        
 
-72    s21           1. Bastante                         122 (22.3%)           IIII                   546        0         
+73    s21           1. Bastante                         122 (22.3%)           IIII                   546        0         
       [character]   2. Mucho                             32 ( 5.9%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             199 (36.4%)           IIIIIII                                     
                     4. Un poco                          193 (35.3%)           IIIIIII                                     
 
-73    s22           1. Bastante                         149 (27.3%)           IIIII                  546        0         
+74    s22           1. Bastante                         149 (27.3%)           IIIII                  546        0         
       [character]   2. Mucho                             58 (10.6%)           II                     (100.0%)   (0.0%)    
                     3. Nada                             221 (40.5%)           IIIIIIII                                    
                     4. Un poco                          118 (21.6%)           IIII                                        
 
-74    s23           1. Bastante                         157 (28.8%)           IIIII                  546        0         
+75    s23           1. Bastante                         157 (28.8%)           IIIII                  546        0         
       [character]   2. Mucho                             41 ( 7.5%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             143 (26.2%)           IIIII                                       
                     4. Un poco                          205 (37.5%)           IIIIIII                                     
 
-75    s24           1. Bastante                         135 (24.7%)           IIII                   546        0         
+76    s24           1. Bastante                         135 (24.7%)           IIII                   546        0         
       [character]   2. Mucho                             61 (11.2%)           II                     (100.0%)   (0.0%)    
                     3. Nada                             152 (27.8%)           IIIII                                       
                     4. Un poco                          198 (36.3%)           IIIIIII                                     
 
-76    s25           1. Bastante                          83 (15.2%)           III                    546        0         
+77    s25           1. Bastante                          83 (15.2%)           III                    546        0         
       [character]   2. Mucho                             19 ( 3.5%)                                  (100.0%)   (0.0%)    
                     3. Nada                             304 (55.7%)           IIIIIIIIIII                                 
                     4. Un poco                          140 (25.6%)           IIIII                                       
 
-77    s26           1. Bastante                          55 (10.1%)           II                     546        0         
+78    s26           1. Bastante                          55 (10.1%)           II                     546        0         
       [character]   2. Mucho                             19 ( 3.5%)                                  (100.0%)   (0.0%)    
                     3. Nada                             354 (64.8%)           IIIIIIIIIIII                                
                     4. Un poco                          118 (21.6%)           IIII                                        
 
-78    s27           1. Bastante                          65 (11.9%)           II                     545        1         
+79    s27           1. Bastante                          65 (11.9%)           II                     545        1         
       [character]   2. Mucho                             29 ( 5.3%)           I                      (99.8%)    (0.2%)    
                     3. Nada                             343 (62.9%)           IIIIIIIIIIII                                
                     4. Un poco                          108 (19.8%)           III                                         
 
-79    s28           1. Bastante                          91 (16.7%)           III                    546        0         
+80    s28           1. Bastante                          91 (16.7%)           III                    546        0         
       [character]   2. Mucho                             32 ( 5.9%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             266 (48.7%)           IIIIIIIII                                   
                     4. Un poco                          157 (28.8%)           IIIII                                       
 
-80    s29           1. Bastante                          38 ( 7.0%)           I                      546        0         
+81    s29           1. Bastante                          38 ( 7.0%)           I                      546        0         
       [character]   2. Mucho                             13 ( 2.4%)                                  (100.0%)   (0.0%)    
                     3. Nada                             436 (79.9%)           IIIIIIIIIIIIIII                             
                     4. Un poco                           59 (10.8%)           II                                          
 
-81    s30           1. Bastante                          20 ( 3.7%)                                  544        2         
+82    s30           1. Bastante                          20 ( 3.7%)                                  544        2         
       [character]   2. Mucho                              3 ( 0.6%)                                  (99.6%)    (0.4%)    
                     3. Nada                             483 (88.8%)           IIIIIIIIIIIIIIIII                           
                     4. Un poco                           38 ( 7.0%)           I                                           
 
-82    s31           1. Bastante                          41 ( 7.5%)           I                      545        1         
+83    s31           1. Bastante                          41 ( 7.5%)           I                      545        1         
       [character]   2. Mucho                             46 ( 8.4%)           I                      (99.8%)    (0.2%)    
                     3. Nada                             394 (72.3%)           IIIIIIIIIIIIII                              
                     4. Un poco                           64 (11.7%)           II                                          
 
-83    s32           1. Bastante                          84 (15.4%)           III                    546        0         
+84    s32           1. Bastante                          84 (15.4%)           III                    546        0         
       [character]   2. Mucho                             22 ( 4.0%)                                  (100.0%)   (0.0%)    
                     3. Nada                             281 (51.5%)           IIIIIIIIII                                  
                     4. Un poco                          159 (29.1%)           IIIII                                       
 
-84    s33           1. Bastante                          31 ( 5.7%)           I                      546        0         
+85    s33           1. Bastante                          31 ( 5.7%)           I                      546        0         
       [character]   2. Mucho                              9 ( 1.6%)                                  (100.0%)   (0.0%)    
                     3. Nada                             372 (68.1%)           IIIIIIIIIIIII                               
                     4. Un poco                          134 (24.5%)           IIII                                        
 
-85    s34           1. Bastante                         190 (34.8%)           IIIIII                 546        0         
+86    s34           1. Bastante                         190 (34.8%)           IIIIII                 546        0         
       [character]   2. Mucho                             73 (13.4%)           II                     (100.0%)   (0.0%)    
                     3. Nada                             151 (27.7%)           IIIII                                       
                     4. Un poco                          132 (24.2%)           IIII                                        
 
-86    s35           1. Bastante                         172 (31.5%)           IIIIII                 546        0         
+87    s35           1. Bastante                         172 (31.5%)           IIIIII                 546        0         
       [character]   2. Mucho                             86 (15.8%)           III                    (100.0%)   (0.0%)    
                     3. Nada                             164 (30.0%)           IIIIII                                      
                     4. Un poco                          124 (22.7%)           IIII                                        
 
-87    s36           1. Bastante                         145 (26.6%)           IIIII                  546        0         
+88    s36           1. Bastante                         145 (26.6%)           IIIII                  546        0         
       [character]   2. Mucho                             86 (15.8%)           III                    (100.0%)   (0.0%)    
                     3. Nada                             181 (33.2%)           IIIIII                                      
                     4. Un poco                          134 (24.5%)           IIII                                        
 
-88    s37           1. Bastante                          84 (15.4%)           III                    546        0         
+89    s37           1. Bastante                          84 (15.4%)           III                    546        0         
       [character]   2. Mucho                             29 ( 5.3%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             232 (42.5%)           IIIIIIII                                    
                     4. Un poco                          201 (36.8%)           IIIIIII                                     
 
-89    s38           1. Bastante                         165 (30.2%)           IIIIII                 546        0         
+90    s38           1. Bastante                         165 (30.2%)           IIIIII                 546        0         
       [character]   2. Mucho                             92 (16.8%)           III                    (100.0%)   (0.0%)    
                     3. Nada                             146 (26.7%)           IIIII                                       
                     4. Un poco                          143 (26.2%)           IIIII                                       
 
-90    s39           1. Bastante                          44 ( 8.1%)           I                      546        0         
+91    s39           1. Bastante                          44 ( 8.1%)           I                      546        0         
       [character]   2. Mucho                             28 ( 5.1%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             373 (68.3%)           IIIIIIIIIIIII                               
                     4. Un poco                          101 (18.5%)           III                                         
 
-91    s40           1. Bastante                          55 (10.1%)           II                     546        0         
+92    s40           1. Bastante                          55 (10.1%)           II                     546        0         
       [character]   2. Mucho                             33 ( 6.0%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             314 (57.5%)           IIIIIIIIIII                                 
                     4. Un poco                          144 (26.4%)           IIIII                                       
 
-92    s41           1. Bastante                         123 (22.5%)           IIII                   546        0         
+93    s41           1. Bastante                         123 (22.5%)           IIII                   546        0         
       [character]   2. Mucho                             53 ( 9.7%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             195 (35.7%)           IIIIIII                                     
                     4. Un poco                          175 (32.1%)           IIIIII                                      
 
-93    s42           1. Bastante                         122 (22.3%)           IIII                   546        0         
+94    s42           1. Bastante                         122 (22.3%)           IIII                   546        0         
       [character]   2. Mucho                             52 ( 9.5%)           I                      (100.0%)   (0.0%)    
                     3. Nada                             209 (38.3%)           IIIIIII                                     
                     4. Un poco                          163 (29.9%)           IIIII                                       
 
-94    ...94         1. No                               281 (51.5%)           IIIIIIIIII             546        0         
+95    ...95         1. No                               281 (51.5%)           IIIIIIIIII             546        0         
       [character]   2. Si                               265 (48.5%)           IIIIIIIII              (100.0%)   (0.0%)    
 
-95    ...95         1. No                               251 (46.1%)           IIIIIIIII              545        1         
+96    ...96         1. No                               251 (46.1%)           IIIIIIIII              545        1         
       [character]   2. Si                               294 (53.9%)           IIIIIIIIII             (99.8%)    (0.2%)    
 
-96    ...96         1. No                               123 (22.5%)           IIII                   546        0         
+97    ...97         1. No                               123 (22.5%)           IIII                   546        0         
       [character]   2. Si                               423 (77.5%)           IIIIIIIIIIIIIII        (100.0%)   (0.0%)    
 
-97    ...97         1. No                               135 (24.7%)           IIII                   546        0         
+98    ...98         1. No                               135 (24.7%)           IIII                   546        0         
       [character]   2. Si                               411 (75.3%)           IIIIIIIIIIIIIII        (100.0%)   (0.0%)    
 
-98    ...98         1. No                               116 (21.3%)           IIII                   545        1         
+99    ...99         1. No                               116 (21.3%)           IIII                   545        1         
       [character]   2. Si                               429 (78.7%)           IIIIIIIIIIIIIII        (99.8%)    (0.2%)    
 
-99    ...99         1. No                               246 (45.2%)           IIIIIIIII              544        2         
+100   ...100        1. No                               246 (45.2%)           IIIIIIIII              544        2         
       [character]   2. Si                               298 (54.8%)           IIIIIIIIII             (99.6%)    (0.4%)    
 
-100   ...100        1. No                               309 (56.8%)           IIIIIIIIIII            544        2         
+101   ...101        1. No                               309 (56.8%)           IIIIIIIIIII            544        2         
       [character]   2. Si                               235 (43.2%)           IIIIIIII               (99.6%)    (0.4%)    
 
-101   ...101        1. No                               198 (64.1%)           IIIIIIIIIIII           309        237       
+102   ...102        1. No                               198 (64.1%)           IIIIIIIIIIII           309        237       
       [character]   2. Si                               111 (35.9%)           IIIIIII                (56.6%)    (43.4%)   
 
-102   ...102        1. NINGUNO                           87 (23.1%)           IIII                   377        169       
+103   ...103        1. NINGUNO                           87 (23.1%)           IIII                   377        169       
       [character]   2. NO                                58 (15.4%)           III                    (69.0%)    (31.0%)   
                     3. NINGUNA                           22 ( 5.8%)           I                                           
                     4. NO. A VECES ME PREOCUPA Q          2 ( 0.5%)                                                       
@@ -759,7 +768,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
                     10. A LOS PACIENTES LES VULNE         1 ( 0.3%)                                                       
                     [ 202 others ]                      202 (53.6%)           IIIIIIIIII                                  
 
-103   ...103        1. NINGUNO                          133 (46.0%)           IIIIIIIII              289        257       
+104   ...104        1. NINGUNO                          133 (46.0%)           IIIIIIIII              289        257       
       [character]   2. NINGUNA                           45 (15.6%)           III                    (52.9%)    (47.1%)   
                     3. ME GUSTARÍA SABER MÁS SOB          2 ( 0.7%)                                                       
                     4. ¿ CUÁNDO VOLVERÉ A TRABAJ          1 ( 0.3%)                                                       
@@ -771,7 +780,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
                     10. ¿COMO SERÁ LA CIRUGÍA?            1 ( 0.3%)                                                       
                     [ 102 others ]                      102 (35.3%)           IIIIIII                                     
 
-104   ...104        1. ¿CÓMO HAN SALIDO LOS EXAM         1 ( 4.2%)                                   24         522       
+105   ...105        1. ¿CÓMO HAN SALIDO LOS EXAM         1 ( 4.2%)                                   24         522       
       [character]   2. ¿CÓMO PUEDO CAMBIAR DE PO         1 ( 4.2%)                                   (4.4%)     (95.6%)   
                     3. ¿CUÁL ES MI DIAGNÓSTICO?          1 ( 4.2%)                                                        
                     4. ¿CUÁL VA A SER EL TRATAMI         1 ( 4.2%)                                                        
@@ -783,20 +792,20 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
                     10. A DONDE LLEVO EL TENSIOME        1 ( 4.2%)                                                        
                     [ 14 others ]                       14 (58.3%)            IIIIIIIIIII                                 
 
-105   ...105        1. ¿CUÁL ES LA MÁS QUE LE AC        1 (16.7%)             III                    6          540       
+106   ...106        1. ¿CUÁL ES LA MÁS QUE LE AC        1 (16.7%)             III                    6          540       
       [character]   2. CUAL ES EL PROPOSITO DE L        1 (16.7%)             III                    (1.1%)     (98.9%)   
                     3. CUAL SERIA EL PROCESO A S        1 (16.7%)             III                                         
                     4. EL PIE ESTÁ VOLANDO, NO L        1 (16.7%)             III                                         
                     5. LA TERAPEUTA LE PREOCUPAB        1 (16.7%)             III                                         
                     6. QUE TODO SER HUMANO QUE E        1 (16.7%)             III                                         
 
-106   ...106        Mean (sd) : 5.6 (2.9)               11 distinct values            :              545        1         
+107   ...107        Mean (sd) : 5.6 (2.9)               11 distinct values            :              545        1         
       [numeric]     min &lt; med &lt; max:                                          .       : .   :        (99.8%)    (0.2%)    
                     0 &lt; 6 &lt; 10                                                :       : : : :   .                         
                     IQR (CV) : 4 (0.5)                                        :   : . : : : : : :                         
                                                                               : : : : : : : : : :                         
 
-107   ...107        1. Complete                         545 (100.0%)          IIIIIIIIIIIIIIIIIIII   545        1         
+108   ...108        1. Complete                         545 (100.0%)          IIIIIIIIIIIIIIIIIIII   545        1         
       [character]                                                                                    (99.8%)    (0.2%)    
 --------------------------------------------------------------------------------------------------------------------------</code></pre>
 </div>
@@ -992,23 +1001,23 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">add_n</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>              <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="usiivvjbor" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#usiivvjbor table {
+<div id="jloeayhtew" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jloeayhtew table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#usiivvjbor thead, #usiivvjbor tbody, #usiivvjbor tfoot, #usiivvjbor tr, #usiivvjbor td, #usiivvjbor th {
+#jloeayhtew thead, #jloeayhtew tbody, #jloeayhtew tfoot, #jloeayhtew tr, #jloeayhtew td, #jloeayhtew th {
   border-style: none;
 }
 
-#usiivvjbor p {
+#jloeayhtew p {
   margin: 0;
   padding: 0;
 }
 
-#usiivvjbor .gt_table {
+#jloeayhtew .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1034,12 +1043,12 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-left-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_caption {
+#jloeayhtew .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#usiivvjbor .gt_title {
+#jloeayhtew .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1051,7 +1060,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-bottom-width: 0;
 }
 
-#usiivvjbor .gt_subtitle {
+#jloeayhtew .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1063,7 +1072,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-top-width: 0;
 }
 
-#usiivvjbor .gt_heading {
+#jloeayhtew .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1075,13 +1084,13 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-right-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_bottom_border {
+#jloeayhtew .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_col_headings {
+#jloeayhtew .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1096,7 +1105,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-right-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_col_heading {
+#jloeayhtew .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1116,7 +1125,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   overflow-x: hidden;
 }
 
-#usiivvjbor .gt_column_spanner_outer {
+#jloeayhtew .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1128,15 +1137,15 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 4px;
 }
 
-#usiivvjbor .gt_column_spanner_outer:first-child {
+#jloeayhtew .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#usiivvjbor .gt_column_spanner_outer:last-child {
+#jloeayhtew .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#usiivvjbor .gt_column_spanner {
+#jloeayhtew .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1148,11 +1157,11 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   width: 100%;
 }
 
-#usiivvjbor .gt_spanner_row {
+#jloeayhtew .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#usiivvjbor .gt_group_heading {
+#jloeayhtew .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1178,7 +1187,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   text-align: left;
 }
 
-#usiivvjbor .gt_empty_group_heading {
+#jloeayhtew .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1193,15 +1202,15 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   vertical-align: middle;
 }
 
-#usiivvjbor .gt_from_md > :first-child {
+#jloeayhtew .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#usiivvjbor .gt_from_md > :last-child {
+#jloeayhtew .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#usiivvjbor .gt_row {
+#jloeayhtew .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1220,7 +1229,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   overflow-x: hidden;
 }
 
-#usiivvjbor .gt_stub {
+#jloeayhtew .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1233,7 +1242,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 5px;
 }
 
-#usiivvjbor .gt_stub_row_group {
+#jloeayhtew .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1247,15 +1256,15 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   vertical-align: top;
 }
 
-#usiivvjbor .gt_row_group_first td {
+#jloeayhtew .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#usiivvjbor .gt_row_group_first th {
+#jloeayhtew .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#usiivvjbor .gt_summary_row {
+#jloeayhtew .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1265,16 +1274,16 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 5px;
 }
 
-#usiivvjbor .gt_first_summary_row {
+#jloeayhtew .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_first_summary_row.thick {
+#jloeayhtew .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#usiivvjbor .gt_last_summary_row {
+#jloeayhtew .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1284,7 +1293,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-bottom-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_grand_summary_row {
+#jloeayhtew .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1294,7 +1303,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 5px;
 }
 
-#usiivvjbor .gt_first_grand_summary_row {
+#jloeayhtew .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1304,7 +1313,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-top-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_last_grand_summary_row_top {
+#jloeayhtew .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1314,11 +1323,11 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-bottom-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_striped {
+#jloeayhtew .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#usiivvjbor .gt_table_body {
+#jloeayhtew .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1327,7 +1336,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-bottom-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_footnotes {
+#jloeayhtew .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1341,7 +1350,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-right-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_footnote {
+#jloeayhtew .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1350,7 +1359,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 5px;
 }
 
-#usiivvjbor .gt_sourcenotes {
+#jloeayhtew .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1364,7 +1373,7 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   border-right-color: #D3D3D3;
 }
 
-#usiivvjbor .gt_sourcenote {
+#jloeayhtew .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1372,72 +1381,72 @@ No    Variable      Stats / Values                      Freqs (% of Valid)    Gr
   padding-right: 5px;
 }
 
-#usiivvjbor .gt_left {
+#jloeayhtew .gt_left {
   text-align: left;
 }
 
-#usiivvjbor .gt_center {
+#jloeayhtew .gt_center {
   text-align: center;
 }
 
-#usiivvjbor .gt_right {
+#jloeayhtew .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#usiivvjbor .gt_font_normal {
+#jloeayhtew .gt_font_normal {
   font-weight: normal;
 }
 
-#usiivvjbor .gt_font_bold {
+#jloeayhtew .gt_font_bold {
   font-weight: bold;
 }
 
-#usiivvjbor .gt_font_italic {
+#jloeayhtew .gt_font_italic {
   font-style: italic;
 }
 
-#usiivvjbor .gt_super {
+#jloeayhtew .gt_super {
   font-size: 65%;
 }
 
-#usiivvjbor .gt_footnote_marks {
+#jloeayhtew .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#usiivvjbor .gt_asterisk {
+#jloeayhtew .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#usiivvjbor .gt_indent_1 {
+#jloeayhtew .gt_indent_1 {
   text-indent: 5px;
 }
 
-#usiivvjbor .gt_indent_2 {
+#jloeayhtew .gt_indent_2 {
   text-indent: 10px;
 }
 
-#usiivvjbor .gt_indent_3 {
+#jloeayhtew .gt_indent_3 {
   text-indent: 15px;
 }
 
-#usiivvjbor .gt_indent_4 {
+#jloeayhtew .gt_indent_4 {
   text-indent: 20px;
 }
 
-#usiivvjbor .gt_indent_5 {
+#jloeayhtew .gt_indent_5 {
   text-indent: 25px;
 }
 
-#usiivvjbor .katex-display {
+#jloeayhtew .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#usiivvjbor div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jloeayhtew div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1758,23 +1767,23 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>              <span class="fu">add_n</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>              <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="slxyzlqztv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#slxyzlqztv table {
+<div id="otrpvwkhxm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#otrpvwkhxm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#slxyzlqztv thead, #slxyzlqztv tbody, #slxyzlqztv tfoot, #slxyzlqztv tr, #slxyzlqztv td, #slxyzlqztv th {
+#otrpvwkhxm thead, #otrpvwkhxm tbody, #otrpvwkhxm tfoot, #otrpvwkhxm tr, #otrpvwkhxm td, #otrpvwkhxm th {
   border-style: none;
 }
 
-#slxyzlqztv p {
+#otrpvwkhxm p {
   margin: 0;
   padding: 0;
 }
 
-#slxyzlqztv .gt_table {
+#otrpvwkhxm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1800,12 +1809,12 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_caption {
+#otrpvwkhxm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#slxyzlqztv .gt_title {
+#otrpvwkhxm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1817,7 +1826,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#slxyzlqztv .gt_subtitle {
+#otrpvwkhxm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1829,7 +1838,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#slxyzlqztv .gt_heading {
+#otrpvwkhxm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1841,13 +1850,13 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_bottom_border {
+#otrpvwkhxm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_col_headings {
+#otrpvwkhxm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1862,7 +1871,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_col_heading {
+#otrpvwkhxm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1882,7 +1891,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#slxyzlqztv .gt_column_spanner_outer {
+#otrpvwkhxm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1894,15 +1903,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#slxyzlqztv .gt_column_spanner_outer:first-child {
+#otrpvwkhxm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#slxyzlqztv .gt_column_spanner_outer:last-child {
+#otrpvwkhxm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#slxyzlqztv .gt_column_spanner {
+#otrpvwkhxm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1914,11 +1923,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#slxyzlqztv .gt_spanner_row {
+#otrpvwkhxm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#slxyzlqztv .gt_group_heading {
+#otrpvwkhxm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1944,7 +1953,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#slxyzlqztv .gt_empty_group_heading {
+#otrpvwkhxm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1959,15 +1968,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#slxyzlqztv .gt_from_md > :first-child {
+#otrpvwkhxm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#slxyzlqztv .gt_from_md > :last-child {
+#otrpvwkhxm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#slxyzlqztv .gt_row {
+#otrpvwkhxm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1986,7 +1995,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#slxyzlqztv .gt_stub {
+#otrpvwkhxm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1999,7 +2008,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#slxyzlqztv .gt_stub_row_group {
+#otrpvwkhxm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2013,15 +2022,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#slxyzlqztv .gt_row_group_first td {
+#otrpvwkhxm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#slxyzlqztv .gt_row_group_first th {
+#otrpvwkhxm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#slxyzlqztv .gt_summary_row {
+#otrpvwkhxm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2031,16 +2040,16 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#slxyzlqztv .gt_first_summary_row {
+#otrpvwkhxm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_first_summary_row.thick {
+#otrpvwkhxm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#slxyzlqztv .gt_last_summary_row {
+#otrpvwkhxm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2050,7 +2059,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_grand_summary_row {
+#otrpvwkhxm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2060,7 +2069,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#slxyzlqztv .gt_first_grand_summary_row {
+#otrpvwkhxm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2070,7 +2079,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_last_grand_summary_row_top {
+#otrpvwkhxm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2080,11 +2089,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_striped {
+#otrpvwkhxm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#slxyzlqztv .gt_table_body {
+#otrpvwkhxm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2093,7 +2102,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_footnotes {
+#otrpvwkhxm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2107,7 +2116,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_footnote {
+#otrpvwkhxm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2116,7 +2125,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#slxyzlqztv .gt_sourcenotes {
+#otrpvwkhxm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2130,7 +2139,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#slxyzlqztv .gt_sourcenote {
+#otrpvwkhxm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2138,72 +2147,72 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#slxyzlqztv .gt_left {
+#otrpvwkhxm .gt_left {
   text-align: left;
 }
 
-#slxyzlqztv .gt_center {
+#otrpvwkhxm .gt_center {
   text-align: center;
 }
 
-#slxyzlqztv .gt_right {
+#otrpvwkhxm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#slxyzlqztv .gt_font_normal {
+#otrpvwkhxm .gt_font_normal {
   font-weight: normal;
 }
 
-#slxyzlqztv .gt_font_bold {
+#otrpvwkhxm .gt_font_bold {
   font-weight: bold;
 }
 
-#slxyzlqztv .gt_font_italic {
+#otrpvwkhxm .gt_font_italic {
   font-style: italic;
 }
 
-#slxyzlqztv .gt_super {
+#otrpvwkhxm .gt_super {
   font-size: 65%;
 }
 
-#slxyzlqztv .gt_footnote_marks {
+#otrpvwkhxm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#slxyzlqztv .gt_asterisk {
+#otrpvwkhxm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#slxyzlqztv .gt_indent_1 {
+#otrpvwkhxm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#slxyzlqztv .gt_indent_2 {
+#otrpvwkhxm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#slxyzlqztv .gt_indent_3 {
+#otrpvwkhxm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#slxyzlqztv .gt_indent_4 {
+#otrpvwkhxm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#slxyzlqztv .gt_indent_5 {
+#otrpvwkhxm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#slxyzlqztv .katex-display {
+#otrpvwkhxm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#slxyzlqztv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#otrpvwkhxm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2265,23 +2274,23 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_n</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="kzjmnglebd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#kzjmnglebd table {
+<div id="jzqwmqjvid" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jzqwmqjvid table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#kzjmnglebd thead, #kzjmnglebd tbody, #kzjmnglebd tfoot, #kzjmnglebd tr, #kzjmnglebd td, #kzjmnglebd th {
+#jzqwmqjvid thead, #jzqwmqjvid tbody, #jzqwmqjvid tfoot, #jzqwmqjvid tr, #jzqwmqjvid td, #jzqwmqjvid th {
   border-style: none;
 }
 
-#kzjmnglebd p {
+#jzqwmqjvid p {
   margin: 0;
   padding: 0;
 }
 
-#kzjmnglebd .gt_table {
+#jzqwmqjvid .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2307,12 +2316,12 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_caption {
+#jzqwmqjvid .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#kzjmnglebd .gt_title {
+#jzqwmqjvid .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2324,7 +2333,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#kzjmnglebd .gt_subtitle {
+#jzqwmqjvid .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2336,7 +2345,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#kzjmnglebd .gt_heading {
+#jzqwmqjvid .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2348,13 +2357,13 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_bottom_border {
+#jzqwmqjvid .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_col_headings {
+#jzqwmqjvid .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2369,7 +2378,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_col_heading {
+#jzqwmqjvid .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2389,7 +2398,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#kzjmnglebd .gt_column_spanner_outer {
+#jzqwmqjvid .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2401,15 +2410,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#kzjmnglebd .gt_column_spanner_outer:first-child {
+#jzqwmqjvid .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#kzjmnglebd .gt_column_spanner_outer:last-child {
+#jzqwmqjvid .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#kzjmnglebd .gt_column_spanner {
+#jzqwmqjvid .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2421,11 +2430,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#kzjmnglebd .gt_spanner_row {
+#jzqwmqjvid .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#kzjmnglebd .gt_group_heading {
+#jzqwmqjvid .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2451,7 +2460,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#kzjmnglebd .gt_empty_group_heading {
+#jzqwmqjvid .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2466,15 +2475,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#kzjmnglebd .gt_from_md > :first-child {
+#jzqwmqjvid .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#kzjmnglebd .gt_from_md > :last-child {
+#jzqwmqjvid .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#kzjmnglebd .gt_row {
+#jzqwmqjvid .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2493,7 +2502,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#kzjmnglebd .gt_stub {
+#jzqwmqjvid .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2506,7 +2515,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#kzjmnglebd .gt_stub_row_group {
+#jzqwmqjvid .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2520,15 +2529,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#kzjmnglebd .gt_row_group_first td {
+#jzqwmqjvid .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#kzjmnglebd .gt_row_group_first th {
+#jzqwmqjvid .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#kzjmnglebd .gt_summary_row {
+#jzqwmqjvid .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2538,16 +2547,16 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#kzjmnglebd .gt_first_summary_row {
+#jzqwmqjvid .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_first_summary_row.thick {
+#jzqwmqjvid .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#kzjmnglebd .gt_last_summary_row {
+#jzqwmqjvid .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2557,7 +2566,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_grand_summary_row {
+#jzqwmqjvid .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2567,7 +2576,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#kzjmnglebd .gt_first_grand_summary_row {
+#jzqwmqjvid .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2577,7 +2586,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_last_grand_summary_row_top {
+#jzqwmqjvid .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2587,11 +2596,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_striped {
+#jzqwmqjvid .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#kzjmnglebd .gt_table_body {
+#jzqwmqjvid .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2600,7 +2609,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_footnotes {
+#jzqwmqjvid .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2614,7 +2623,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_footnote {
+#jzqwmqjvid .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2623,7 +2632,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#kzjmnglebd .gt_sourcenotes {
+#jzqwmqjvid .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2637,7 +2646,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#kzjmnglebd .gt_sourcenote {
+#jzqwmqjvid .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2645,72 +2654,72 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#kzjmnglebd .gt_left {
+#jzqwmqjvid .gt_left {
   text-align: left;
 }
 
-#kzjmnglebd .gt_center {
+#jzqwmqjvid .gt_center {
   text-align: center;
 }
 
-#kzjmnglebd .gt_right {
+#jzqwmqjvid .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#kzjmnglebd .gt_font_normal {
+#jzqwmqjvid .gt_font_normal {
   font-weight: normal;
 }
 
-#kzjmnglebd .gt_font_bold {
+#jzqwmqjvid .gt_font_bold {
   font-weight: bold;
 }
 
-#kzjmnglebd .gt_font_italic {
+#jzqwmqjvid .gt_font_italic {
   font-style: italic;
 }
 
-#kzjmnglebd .gt_super {
+#jzqwmqjvid .gt_super {
   font-size: 65%;
 }
 
-#kzjmnglebd .gt_footnote_marks {
+#jzqwmqjvid .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#kzjmnglebd .gt_asterisk {
+#jzqwmqjvid .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#kzjmnglebd .gt_indent_1 {
+#jzqwmqjvid .gt_indent_1 {
   text-indent: 5px;
 }
 
-#kzjmnglebd .gt_indent_2 {
+#jzqwmqjvid .gt_indent_2 {
   text-indent: 10px;
 }
 
-#kzjmnglebd .gt_indent_3 {
+#jzqwmqjvid .gt_indent_3 {
   text-indent: 15px;
 }
 
-#kzjmnglebd .gt_indent_4 {
+#jzqwmqjvid .gt_indent_4 {
   text-indent: 20px;
 }
 
-#kzjmnglebd .gt_indent_5 {
+#jzqwmqjvid .gt_indent_5 {
   text-indent: 25px;
 }
 
-#kzjmnglebd .katex-display {
+#jzqwmqjvid .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#kzjmnglebd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jzqwmqjvid div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2803,23 +2812,23 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="hdwphbiwgh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hdwphbiwgh table {
+<div id="kbfvebbyxb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kbfvebbyxb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hdwphbiwgh thead, #hdwphbiwgh tbody, #hdwphbiwgh tfoot, #hdwphbiwgh tr, #hdwphbiwgh td, #hdwphbiwgh th {
+#kbfvebbyxb thead, #kbfvebbyxb tbody, #kbfvebbyxb tfoot, #kbfvebbyxb tr, #kbfvebbyxb td, #kbfvebbyxb th {
   border-style: none;
 }
 
-#hdwphbiwgh p {
+#kbfvebbyxb p {
   margin: 0;
   padding: 0;
 }
 
-#hdwphbiwgh .gt_table {
+#kbfvebbyxb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2845,12 +2854,12 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_caption {
+#kbfvebbyxb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hdwphbiwgh .gt_title {
+#kbfvebbyxb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2862,7 +2871,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#hdwphbiwgh .gt_subtitle {
+#kbfvebbyxb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2874,7 +2883,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#hdwphbiwgh .gt_heading {
+#kbfvebbyxb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2886,13 +2895,13 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_bottom_border {
+#kbfvebbyxb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_col_headings {
+#kbfvebbyxb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2907,7 +2916,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_col_heading {
+#kbfvebbyxb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2927,7 +2936,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#hdwphbiwgh .gt_column_spanner_outer {
+#kbfvebbyxb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2939,15 +2948,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#hdwphbiwgh .gt_column_spanner_outer:first-child {
+#kbfvebbyxb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hdwphbiwgh .gt_column_spanner_outer:last-child {
+#kbfvebbyxb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hdwphbiwgh .gt_column_spanner {
+#kbfvebbyxb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2959,11 +2968,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#hdwphbiwgh .gt_spanner_row {
+#kbfvebbyxb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hdwphbiwgh .gt_group_heading {
+#kbfvebbyxb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2989,7 +2998,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#hdwphbiwgh .gt_empty_group_heading {
+#kbfvebbyxb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3004,15 +3013,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#hdwphbiwgh .gt_from_md > :first-child {
+#kbfvebbyxb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hdwphbiwgh .gt_from_md > :last-child {
+#kbfvebbyxb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hdwphbiwgh .gt_row {
+#kbfvebbyxb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3031,7 +3040,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#hdwphbiwgh .gt_stub {
+#kbfvebbyxb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3044,7 +3053,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#hdwphbiwgh .gt_stub_row_group {
+#kbfvebbyxb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3058,15 +3067,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#hdwphbiwgh .gt_row_group_first td {
+#kbfvebbyxb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hdwphbiwgh .gt_row_group_first th {
+#kbfvebbyxb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hdwphbiwgh .gt_summary_row {
+#kbfvebbyxb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3076,16 +3085,16 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#hdwphbiwgh .gt_first_summary_row {
+#kbfvebbyxb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_first_summary_row.thick {
+#kbfvebbyxb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hdwphbiwgh .gt_last_summary_row {
+#kbfvebbyxb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3095,7 +3104,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_grand_summary_row {
+#kbfvebbyxb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3105,7 +3114,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#hdwphbiwgh .gt_first_grand_summary_row {
+#kbfvebbyxb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3115,7 +3124,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_last_grand_summary_row_top {
+#kbfvebbyxb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3125,11 +3134,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_striped {
+#kbfvebbyxb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hdwphbiwgh .gt_table_body {
+#kbfvebbyxb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3138,7 +3147,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_footnotes {
+#kbfvebbyxb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3152,7 +3161,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_footnote {
+#kbfvebbyxb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3161,7 +3170,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#hdwphbiwgh .gt_sourcenotes {
+#kbfvebbyxb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3175,7 +3184,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#hdwphbiwgh .gt_sourcenote {
+#kbfvebbyxb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3183,72 +3192,72 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#hdwphbiwgh .gt_left {
+#kbfvebbyxb .gt_left {
   text-align: left;
 }
 
-#hdwphbiwgh .gt_center {
+#kbfvebbyxb .gt_center {
   text-align: center;
 }
 
-#hdwphbiwgh .gt_right {
+#kbfvebbyxb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hdwphbiwgh .gt_font_normal {
+#kbfvebbyxb .gt_font_normal {
   font-weight: normal;
 }
 
-#hdwphbiwgh .gt_font_bold {
+#kbfvebbyxb .gt_font_bold {
   font-weight: bold;
 }
 
-#hdwphbiwgh .gt_font_italic {
+#kbfvebbyxb .gt_font_italic {
   font-style: italic;
 }
 
-#hdwphbiwgh .gt_super {
+#kbfvebbyxb .gt_super {
   font-size: 65%;
 }
 
-#hdwphbiwgh .gt_footnote_marks {
+#kbfvebbyxb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hdwphbiwgh .gt_asterisk {
+#kbfvebbyxb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hdwphbiwgh .gt_indent_1 {
+#kbfvebbyxb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hdwphbiwgh .gt_indent_2 {
+#kbfvebbyxb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hdwphbiwgh .gt_indent_3 {
+#kbfvebbyxb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hdwphbiwgh .gt_indent_4 {
+#kbfvebbyxb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hdwphbiwgh .gt_indent_5 {
+#kbfvebbyxb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hdwphbiwgh .katex-display {
+#kbfvebbyxb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hdwphbiwgh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kbfvebbyxb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3355,23 +3364,23 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="czncuosbjj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#czncuosbjj table {
+<div id="ppuypdojts" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ppuypdojts table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#czncuosbjj thead, #czncuosbjj tbody, #czncuosbjj tfoot, #czncuosbjj tr, #czncuosbjj td, #czncuosbjj th {
+#ppuypdojts thead, #ppuypdojts tbody, #ppuypdojts tfoot, #ppuypdojts tr, #ppuypdojts td, #ppuypdojts th {
   border-style: none;
 }
 
-#czncuosbjj p {
+#ppuypdojts p {
   margin: 0;
   padding: 0;
 }
 
-#czncuosbjj .gt_table {
+#ppuypdojts .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3397,12 +3406,12 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_caption {
+#ppuypdojts .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#czncuosbjj .gt_title {
+#ppuypdojts .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3414,7 +3423,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#czncuosbjj .gt_subtitle {
+#ppuypdojts .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3426,7 +3435,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#czncuosbjj .gt_heading {
+#ppuypdojts .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3438,13 +3447,13 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_bottom_border {
+#ppuypdojts .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_col_headings {
+#ppuypdojts .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3459,7 +3468,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_col_heading {
+#ppuypdojts .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3479,7 +3488,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#czncuosbjj .gt_column_spanner_outer {
+#ppuypdojts .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3491,15 +3500,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#czncuosbjj .gt_column_spanner_outer:first-child {
+#ppuypdojts .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#czncuosbjj .gt_column_spanner_outer:last-child {
+#ppuypdojts .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#czncuosbjj .gt_column_spanner {
+#ppuypdojts .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3511,11 +3520,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#czncuosbjj .gt_spanner_row {
+#ppuypdojts .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#czncuosbjj .gt_group_heading {
+#ppuypdojts .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3541,7 +3550,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#czncuosbjj .gt_empty_group_heading {
+#ppuypdojts .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3556,15 +3565,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#czncuosbjj .gt_from_md > :first-child {
+#ppuypdojts .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#czncuosbjj .gt_from_md > :last-child {
+#ppuypdojts .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#czncuosbjj .gt_row {
+#ppuypdojts .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3583,7 +3592,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#czncuosbjj .gt_stub {
+#ppuypdojts .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3596,7 +3605,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#czncuosbjj .gt_stub_row_group {
+#ppuypdojts .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3610,15 +3619,15 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#czncuosbjj .gt_row_group_first td {
+#ppuypdojts .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#czncuosbjj .gt_row_group_first th {
+#ppuypdojts .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#czncuosbjj .gt_summary_row {
+#ppuypdojts .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3628,16 +3637,16 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#czncuosbjj .gt_first_summary_row {
+#ppuypdojts .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_first_summary_row.thick {
+#ppuypdojts .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#czncuosbjj .gt_last_summary_row {
+#ppuypdojts .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3647,7 +3656,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_grand_summary_row {
+#ppuypdojts .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3657,7 +3666,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#czncuosbjj .gt_first_grand_summary_row {
+#ppuypdojts .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3667,7 +3676,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_last_grand_summary_row_top {
+#ppuypdojts .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3677,11 +3686,11 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_striped {
+#ppuypdojts .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#czncuosbjj .gt_table_body {
+#ppuypdojts .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3690,7 +3699,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_footnotes {
+#ppuypdojts .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3704,7 +3713,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_footnote {
+#ppuypdojts .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3713,7 +3722,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#czncuosbjj .gt_sourcenotes {
+#ppuypdojts .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3727,7 +3736,7 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#czncuosbjj .gt_sourcenote {
+#ppuypdojts .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3735,72 +3744,72 @@ N = 104<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#czncuosbjj .gt_left {
+#ppuypdojts .gt_left {
   text-align: left;
 }
 
-#czncuosbjj .gt_center {
+#ppuypdojts .gt_center {
   text-align: center;
 }
 
-#czncuosbjj .gt_right {
+#ppuypdojts .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#czncuosbjj .gt_font_normal {
+#ppuypdojts .gt_font_normal {
   font-weight: normal;
 }
 
-#czncuosbjj .gt_font_bold {
+#ppuypdojts .gt_font_bold {
   font-weight: bold;
 }
 
-#czncuosbjj .gt_font_italic {
+#ppuypdojts .gt_font_italic {
   font-style: italic;
 }
 
-#czncuosbjj .gt_super {
+#ppuypdojts .gt_super {
   font-size: 65%;
 }
 
-#czncuosbjj .gt_footnote_marks {
+#ppuypdojts .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#czncuosbjj .gt_asterisk {
+#ppuypdojts .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#czncuosbjj .gt_indent_1 {
+#ppuypdojts .gt_indent_1 {
   text-indent: 5px;
 }
 
-#czncuosbjj .gt_indent_2 {
+#ppuypdojts .gt_indent_2 {
   text-indent: 10px;
 }
 
-#czncuosbjj .gt_indent_3 {
+#ppuypdojts .gt_indent_3 {
   text-indent: 15px;
 }
 
-#czncuosbjj .gt_indent_4 {
+#ppuypdojts .gt_indent_4 {
   text-indent: 20px;
 }
 
-#czncuosbjj .gt_indent_5 {
+#ppuypdojts .gt_indent_5 {
   text-indent: 25px;
 }
 
-#czncuosbjj .katex-display {
+#ppuypdojts .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#czncuosbjj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ppuypdojts div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3905,8 +3914,8 @@ N = 221<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </div>
 </div>
 </section>
-<section id="objetivo-3.1-explorar-la-asociacion-entre-sarcopenia-y-los-dominios-de-sparc." class="level2">
-<h2 class="anchored" data-anchor-id="objetivo-3.1-explorar-la-asociacion-entre-sarcopenia-y-los-dominios-de-sparc.">Objetivo 3.1 Explorar la asociacion entre Sarcopenia y los dominios de SPARC.</h2>
+<section id="objetivo-3.1-estimar-la-diferencia-en-necesidades-de-cpdominios-de-sparc-entre-pacientes-sarcopenicos-y-no-sarcopenicos." class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-3.1-estimar-la-diferencia-en-necesidades-de-cpdominios-de-sparc-entre-pacientes-sarcopenicos-y-no-sarcopenicos.">Objetivo 3.1 Estimar la diferencia en necesidades de CP(dominios de SPARC) entre pacientes sarcopenicos y no sarcopenicos.</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
@@ -4144,23 +4153,23 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
 <span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="cyitjkdtbm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#cyitjkdtbm table {
+<div id="nxavqxchub" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#nxavqxchub table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cyitjkdtbm thead, #cyitjkdtbm tbody, #cyitjkdtbm tfoot, #cyitjkdtbm tr, #cyitjkdtbm td, #cyitjkdtbm th {
+#nxavqxchub thead, #nxavqxchub tbody, #nxavqxchub tfoot, #nxavqxchub tr, #nxavqxchub td, #nxavqxchub th {
   border-style: none;
 }
 
-#cyitjkdtbm p {
+#nxavqxchub p {
   margin: 0;
   padding: 0;
 }
 
-#cyitjkdtbm .gt_table {
+#nxavqxchub .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4186,12 +4195,12 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_caption {
+#nxavqxchub .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cyitjkdtbm .gt_title {
+#nxavqxchub .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4203,7 +4212,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-bottom-width: 0;
 }
 
-#cyitjkdtbm .gt_subtitle {
+#nxavqxchub .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4215,7 +4224,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-top-width: 0;
 }
 
-#cyitjkdtbm .gt_heading {
+#nxavqxchub .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4227,13 +4236,13 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_bottom_border {
+#nxavqxchub .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_col_headings {
+#nxavqxchub .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4248,7 +4257,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_col_heading {
+#nxavqxchub .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4268,7 +4277,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   overflow-x: hidden;
 }
 
-#cyitjkdtbm .gt_column_spanner_outer {
+#nxavqxchub .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4280,15 +4289,15 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 4px;
 }
 
-#cyitjkdtbm .gt_column_spanner_outer:first-child {
+#nxavqxchub .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cyitjkdtbm .gt_column_spanner_outer:last-child {
+#nxavqxchub .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cyitjkdtbm .gt_column_spanner {
+#nxavqxchub .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4300,11 +4309,11 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   width: 100%;
 }
 
-#cyitjkdtbm .gt_spanner_row {
+#nxavqxchub .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cyitjkdtbm .gt_group_heading {
+#nxavqxchub .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4330,7 +4339,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   text-align: left;
 }
 
-#cyitjkdtbm .gt_empty_group_heading {
+#nxavqxchub .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4345,15 +4354,15 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   vertical-align: middle;
 }
 
-#cyitjkdtbm .gt_from_md > :first-child {
+#nxavqxchub .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cyitjkdtbm .gt_from_md > :last-child {
+#nxavqxchub .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cyitjkdtbm .gt_row {
+#nxavqxchub .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4372,7 +4381,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   overflow-x: hidden;
 }
 
-#cyitjkdtbm .gt_stub {
+#nxavqxchub .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4385,7 +4394,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 5px;
 }
 
-#cyitjkdtbm .gt_stub_row_group {
+#nxavqxchub .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4399,15 +4408,15 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   vertical-align: top;
 }
 
-#cyitjkdtbm .gt_row_group_first td {
+#nxavqxchub .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cyitjkdtbm .gt_row_group_first th {
+#nxavqxchub .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cyitjkdtbm .gt_summary_row {
+#nxavqxchub .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4417,16 +4426,16 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 5px;
 }
 
-#cyitjkdtbm .gt_first_summary_row {
+#nxavqxchub .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_first_summary_row.thick {
+#nxavqxchub .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cyitjkdtbm .gt_last_summary_row {
+#nxavqxchub .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4436,7 +4445,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_grand_summary_row {
+#nxavqxchub .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4446,7 +4455,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 5px;
 }
 
-#cyitjkdtbm .gt_first_grand_summary_row {
+#nxavqxchub .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4456,7 +4465,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_last_grand_summary_row_top {
+#nxavqxchub .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4466,11 +4475,11 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_striped {
+#nxavqxchub .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cyitjkdtbm .gt_table_body {
+#nxavqxchub .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4479,7 +4488,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_footnotes {
+#nxavqxchub .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4493,7 +4502,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_footnote {
+#nxavqxchub .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4502,7 +4511,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 5px;
 }
 
-#cyitjkdtbm .gt_sourcenotes {
+#nxavqxchub .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4516,7 +4525,7 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#cyitjkdtbm .gt_sourcenote {
+#nxavqxchub .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4524,72 +4533,72 @@ W = 0.97065, p-value = 5.413e-09</code></pre>
   padding-right: 5px;
 }
 
-#cyitjkdtbm .gt_left {
+#nxavqxchub .gt_left {
   text-align: left;
 }
 
-#cyitjkdtbm .gt_center {
+#nxavqxchub .gt_center {
   text-align: center;
 }
 
-#cyitjkdtbm .gt_right {
+#nxavqxchub .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cyitjkdtbm .gt_font_normal {
+#nxavqxchub .gt_font_normal {
   font-weight: normal;
 }
 
-#cyitjkdtbm .gt_font_bold {
+#nxavqxchub .gt_font_bold {
   font-weight: bold;
 }
 
-#cyitjkdtbm .gt_font_italic {
+#nxavqxchub .gt_font_italic {
   font-style: italic;
 }
 
-#cyitjkdtbm .gt_super {
+#nxavqxchub .gt_super {
   font-size: 65%;
 }
 
-#cyitjkdtbm .gt_footnote_marks {
+#nxavqxchub .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cyitjkdtbm .gt_asterisk {
+#nxavqxchub .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cyitjkdtbm .gt_indent_1 {
+#nxavqxchub .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cyitjkdtbm .gt_indent_2 {
+#nxavqxchub .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cyitjkdtbm .gt_indent_3 {
+#nxavqxchub .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cyitjkdtbm .gt_indent_4 {
+#nxavqxchub .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cyitjkdtbm .gt_indent_5 {
+#nxavqxchub .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cyitjkdtbm .katex-display {
+#nxavqxchub .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cyitjkdtbm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nxavqxchub div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4662,23 +4671,23 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(model1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="zwfvpdpxik" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zwfvpdpxik table {
+<div id="lwhroluzeq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lwhroluzeq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zwfvpdpxik thead, #zwfvpdpxik tbody, #zwfvpdpxik tfoot, #zwfvpdpxik tr, #zwfvpdpxik td, #zwfvpdpxik th {
+#lwhroluzeq thead, #lwhroluzeq tbody, #lwhroluzeq tfoot, #lwhroluzeq tr, #lwhroluzeq td, #lwhroluzeq th {
   border-style: none;
 }
 
-#zwfvpdpxik p {
+#lwhroluzeq p {
   margin: 0;
   padding: 0;
 }
 
-#zwfvpdpxik .gt_table {
+#lwhroluzeq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4704,12 +4713,12 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_caption {
+#lwhroluzeq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zwfvpdpxik .gt_title {
+#lwhroluzeq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4721,7 +4730,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-bottom-width: 0;
 }
 
-#zwfvpdpxik .gt_subtitle {
+#lwhroluzeq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4733,7 +4742,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-top-width: 0;
 }
 
-#zwfvpdpxik .gt_heading {
+#lwhroluzeq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4745,13 +4754,13 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_bottom_border {
+#lwhroluzeq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_col_headings {
+#lwhroluzeq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4766,7 +4775,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_col_heading {
+#lwhroluzeq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4786,7 +4795,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   overflow-x: hidden;
 }
 
-#zwfvpdpxik .gt_column_spanner_outer {
+#lwhroluzeq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4798,15 +4807,15 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 4px;
 }
 
-#zwfvpdpxik .gt_column_spanner_outer:first-child {
+#lwhroluzeq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zwfvpdpxik .gt_column_spanner_outer:last-child {
+#lwhroluzeq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zwfvpdpxik .gt_column_spanner {
+#lwhroluzeq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4818,11 +4827,11 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   width: 100%;
 }
 
-#zwfvpdpxik .gt_spanner_row {
+#lwhroluzeq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zwfvpdpxik .gt_group_heading {
+#lwhroluzeq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4848,7 +4857,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   text-align: left;
 }
 
-#zwfvpdpxik .gt_empty_group_heading {
+#lwhroluzeq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4863,15 +4872,15 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   vertical-align: middle;
 }
 
-#zwfvpdpxik .gt_from_md > :first-child {
+#lwhroluzeq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zwfvpdpxik .gt_from_md > :last-child {
+#lwhroluzeq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zwfvpdpxik .gt_row {
+#lwhroluzeq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4890,7 +4899,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   overflow-x: hidden;
 }
 
-#zwfvpdpxik .gt_stub {
+#lwhroluzeq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4903,7 +4912,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 5px;
 }
 
-#zwfvpdpxik .gt_stub_row_group {
+#lwhroluzeq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4917,15 +4926,15 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   vertical-align: top;
 }
 
-#zwfvpdpxik .gt_row_group_first td {
+#lwhroluzeq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zwfvpdpxik .gt_row_group_first th {
+#lwhroluzeq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zwfvpdpxik .gt_summary_row {
+#lwhroluzeq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4935,16 +4944,16 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 5px;
 }
 
-#zwfvpdpxik .gt_first_summary_row {
+#lwhroluzeq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_first_summary_row.thick {
+#lwhroluzeq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zwfvpdpxik .gt_last_summary_row {
+#lwhroluzeq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4954,7 +4963,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_grand_summary_row {
+#lwhroluzeq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4964,7 +4973,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 5px;
 }
 
-#zwfvpdpxik .gt_first_grand_summary_row {
+#lwhroluzeq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4974,7 +4983,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_last_grand_summary_row_top {
+#lwhroluzeq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4984,11 +4993,11 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_striped {
+#lwhroluzeq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zwfvpdpxik .gt_table_body {
+#lwhroluzeq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4997,7 +5006,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_footnotes {
+#lwhroluzeq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5011,7 +5020,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_footnote {
+#lwhroluzeq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5020,7 +5029,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 5px;
 }
 
-#zwfvpdpxik .gt_sourcenotes {
+#lwhroluzeq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5034,7 +5043,7 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#zwfvpdpxik .gt_sourcenote {
+#lwhroluzeq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5042,72 +5051,72 @@ F-statistic: 56.58 on 1 and 544 DF,  p-value: 2.242e-13</code></pre>
   padding-right: 5px;
 }
 
-#zwfvpdpxik .gt_left {
+#lwhroluzeq .gt_left {
   text-align: left;
 }
 
-#zwfvpdpxik .gt_center {
+#lwhroluzeq .gt_center {
   text-align: center;
 }
 
-#zwfvpdpxik .gt_right {
+#lwhroluzeq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zwfvpdpxik .gt_font_normal {
+#lwhroluzeq .gt_font_normal {
   font-weight: normal;
 }
 
-#zwfvpdpxik .gt_font_bold {
+#lwhroluzeq .gt_font_bold {
   font-weight: bold;
 }
 
-#zwfvpdpxik .gt_font_italic {
+#lwhroluzeq .gt_font_italic {
   font-style: italic;
 }
 
-#zwfvpdpxik .gt_super {
+#lwhroluzeq .gt_super {
   font-size: 65%;
 }
 
-#zwfvpdpxik .gt_footnote_marks {
+#lwhroluzeq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zwfvpdpxik .gt_asterisk {
+#lwhroluzeq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zwfvpdpxik .gt_indent_1 {
+#lwhroluzeq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zwfvpdpxik .gt_indent_2 {
+#lwhroluzeq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zwfvpdpxik .gt_indent_3 {
+#lwhroluzeq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zwfvpdpxik .gt_indent_4 {
+#lwhroluzeq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zwfvpdpxik .gt_indent_5 {
+#lwhroluzeq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zwfvpdpxik .katex-display {
+#lwhroluzeq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zwfvpdpxik div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lwhroluzeq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5155,63 +5164,55 @@ AIC    |   AICc |    BIC |    R2 | R2 (adj.) |   RMSE |  Sigma
 4743.1 | 4743.2 | 4756.0 | 0.094 |     0.093 | 18.524 | 18.558</code></pre>
 </div>
 </div>
-<p>El conjunto mínimo suficiente para estimar el efecto total de la sarcopenia en las necesidades paliativas está compuesto por: Edad, <em>Estadio del cáncer</em>, Educación, Compañeros de casa, Diagnóstico principal, Estado civil, Sexo, Área de origen y U.</p>
+<p>Estimación de <em>diferencias ajustadas</em> en las necesidades holísticas no satisfechas, incorporando como covariables edad, sexo, diagnóstico, estado funcional y comorbilidades entre pacientes con y sin sarcopenia.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(sparc_total_st <span class="sc">~</span> sarc_tot_cat <span class="sc">+</span> dx_oms_ca <span class="sc">+</span> edad <span class="sc">+</span> educa <span class="sc">+</span> convivi <span class="sc">+</span> civil <span class="sc">+</span> genero <span class="sc">+</span> procede, <span class="at">data =</span> data)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(sparc_total_st <span class="sc">~</span> sarc_tot_cat <span class="sc">+</span> dx_oms_ca <span class="sc">+</span> edad <span class="sc">+</span> genero <span class="sc">+</span> karno <span class="sc">+</span> charlson, <span class="at">data =</span> data)</span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = sparc_total_st ~ sarc_tot_cat + dx_oms_ca + edad + 
-    educa + convivi + civil + genero + procede, data = data)
+    genero + karno + charlson, data = data)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--47.228 -12.839  -1.678  11.936  57.100 
+-47.496 -12.168  -1.801  10.770  57.440 
 
 Coefficients:
-                   Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)        32.20358    5.88199   5.475 6.76e-08 ***
-sarc_tot_cat       13.57466    1.65117   8.221 1.55e-15 ***
-dx_oms_caCancer     7.04284    2.01590   3.494 0.000516 ***
-edad               -0.14652    0.06157  -2.380 0.017670 *  
-educaBachillerato   1.74446    2.65406   0.657 0.511285    
-educaPrimaria       0.62571    2.32567   0.269 0.787999    
-educaTécnico        5.31059    4.01010   1.324 0.185971    
-educaUniversitario  4.18345    4.04600   1.034 0.301620    
-convivi            -0.11772    0.50393  -0.234 0.815376    
-civilSeparado       2.40295    4.02922   0.596 0.551176    
-civilSoltero        4.00919    2.31604   1.731 0.084023 .  
-civilUnión libre    5.89601    2.13173   2.766 0.005875 ** 
-civilViudo         -0.22512    2.52827  -0.089 0.929083    
-generoFemenino      3.27796    1.67387   1.958 0.050716 .  
-procedeRural        0.34914    1.77129   0.197 0.843818    
+                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     54.46503    6.47814   8.408 3.76e-16 ***
+sarc_tot_cat     9.62774    1.99916   4.816 1.91e-06 ***
+dx_oms_caCancer  2.50229    2.21847   1.128  0.25985    
+edad            -0.23864    0.05406  -4.414 1.22e-05 ***
+generoFemenino   3.01565    1.56544   1.926  0.05458 .  
+karno           -0.17144    0.05443  -3.150  0.00173 ** 
+charlson         2.01684    0.75073   2.687  0.00744 ** 
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 18.03 on 531 degrees of freedom
-Multiple R-squared:  0.1658,    Adjusted R-squared:  0.1438 
-F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
+Residual standard error: 17.74 on 539 degrees of freedom
+Multiple R-squared:  0.1799,    Adjusted R-squared:  0.1708 
+F-statistic: 19.71 on 6 and 539 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(model2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="vhxlcgkuef" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vhxlcgkuef table {
+<div id="mkunvywzhu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mkunvywzhu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vhxlcgkuef thead, #vhxlcgkuef tbody, #vhxlcgkuef tfoot, #vhxlcgkuef tr, #vhxlcgkuef td, #vhxlcgkuef th {
+#mkunvywzhu thead, #mkunvywzhu tbody, #mkunvywzhu tfoot, #mkunvywzhu tr, #mkunvywzhu td, #mkunvywzhu th {
   border-style: none;
 }
 
-#vhxlcgkuef p {
+#mkunvywzhu p {
   margin: 0;
   padding: 0;
 }
 
-#vhxlcgkuef .gt_table {
+#mkunvywzhu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5237,12 +5238,12 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_caption {
+#mkunvywzhu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vhxlcgkuef .gt_title {
+#mkunvywzhu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5254,7 +5255,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-bottom-width: 0;
 }
 
-#vhxlcgkuef .gt_subtitle {
+#mkunvywzhu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5266,7 +5267,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-top-width: 0;
 }
 
-#vhxlcgkuef .gt_heading {
+#mkunvywzhu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5278,13 +5279,13 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_bottom_border {
+#mkunvywzhu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_col_headings {
+#mkunvywzhu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5299,7 +5300,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_col_heading {
+#mkunvywzhu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5319,7 +5320,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   overflow-x: hidden;
 }
 
-#vhxlcgkuef .gt_column_spanner_outer {
+#mkunvywzhu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5331,15 +5332,15 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 4px;
 }
 
-#vhxlcgkuef .gt_column_spanner_outer:first-child {
+#mkunvywzhu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vhxlcgkuef .gt_column_spanner_outer:last-child {
+#mkunvywzhu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vhxlcgkuef .gt_column_spanner {
+#mkunvywzhu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5351,11 +5352,11 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   width: 100%;
 }
 
-#vhxlcgkuef .gt_spanner_row {
+#mkunvywzhu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vhxlcgkuef .gt_group_heading {
+#mkunvywzhu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5381,7 +5382,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   text-align: left;
 }
 
-#vhxlcgkuef .gt_empty_group_heading {
+#mkunvywzhu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5396,15 +5397,15 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   vertical-align: middle;
 }
 
-#vhxlcgkuef .gt_from_md > :first-child {
+#mkunvywzhu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vhxlcgkuef .gt_from_md > :last-child {
+#mkunvywzhu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vhxlcgkuef .gt_row {
+#mkunvywzhu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5423,7 +5424,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   overflow-x: hidden;
 }
 
-#vhxlcgkuef .gt_stub {
+#mkunvywzhu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5436,7 +5437,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 5px;
 }
 
-#vhxlcgkuef .gt_stub_row_group {
+#mkunvywzhu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5450,15 +5451,15 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   vertical-align: top;
 }
 
-#vhxlcgkuef .gt_row_group_first td {
+#mkunvywzhu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vhxlcgkuef .gt_row_group_first th {
+#mkunvywzhu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vhxlcgkuef .gt_summary_row {
+#mkunvywzhu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5468,16 +5469,16 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 5px;
 }
 
-#vhxlcgkuef .gt_first_summary_row {
+#mkunvywzhu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_first_summary_row.thick {
+#mkunvywzhu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vhxlcgkuef .gt_last_summary_row {
+#mkunvywzhu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5487,7 +5488,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_grand_summary_row {
+#mkunvywzhu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5497,7 +5498,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 5px;
 }
 
-#vhxlcgkuef .gt_first_grand_summary_row {
+#mkunvywzhu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5507,7 +5508,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_last_grand_summary_row_top {
+#mkunvywzhu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5517,11 +5518,11 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_striped {
+#mkunvywzhu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vhxlcgkuef .gt_table_body {
+#mkunvywzhu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5530,7 +5531,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_footnotes {
+#mkunvywzhu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5544,7 +5545,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_footnote {
+#mkunvywzhu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5553,7 +5554,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 5px;
 }
 
-#vhxlcgkuef .gt_sourcenotes {
+#mkunvywzhu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5567,7 +5568,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#vhxlcgkuef .gt_sourcenote {
+#mkunvywzhu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5575,72 +5576,72 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
   padding-right: 5px;
 }
 
-#vhxlcgkuef .gt_left {
+#mkunvywzhu .gt_left {
   text-align: left;
 }
 
-#vhxlcgkuef .gt_center {
+#mkunvywzhu .gt_center {
   text-align: center;
 }
 
-#vhxlcgkuef .gt_right {
+#mkunvywzhu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vhxlcgkuef .gt_font_normal {
+#mkunvywzhu .gt_font_normal {
   font-weight: normal;
 }
 
-#vhxlcgkuef .gt_font_bold {
+#mkunvywzhu .gt_font_bold {
   font-weight: bold;
 }
 
-#vhxlcgkuef .gt_font_italic {
+#mkunvywzhu .gt_font_italic {
   font-style: italic;
 }
 
-#vhxlcgkuef .gt_super {
+#mkunvywzhu .gt_super {
   font-size: 65%;
 }
 
-#vhxlcgkuef .gt_footnote_marks {
+#mkunvywzhu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vhxlcgkuef .gt_asterisk {
+#mkunvywzhu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vhxlcgkuef .gt_indent_1 {
+#mkunvywzhu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vhxlcgkuef .gt_indent_2 {
+#mkunvywzhu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vhxlcgkuef .gt_indent_3 {
+#mkunvywzhu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vhxlcgkuef .gt_indent_4 {
+#mkunvywzhu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vhxlcgkuef .gt_indent_5 {
+#mkunvywzhu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vhxlcgkuef .katex-display {
+#mkunvywzhu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vhxlcgkuef div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mkunvywzhu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5663,8 +5664,8 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">sarc_tot_cat</td>
-<td class="gt_row gt_center" headers="estimate">14</td>
-<td class="gt_row gt_center" headers="conf.low">10, 17</td>
+<td class="gt_row gt_center" headers="estimate">9.6</td>
+<td class="gt_row gt_center" headers="conf.low">5.7, 14</td>
 <td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
 <tr class="even">
@@ -5685,103 +5686,17 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Cancer</td>
-<td class="gt_row gt_center" headers="estimate">7.0</td>
-<td class="gt_row gt_center" headers="conf.low">3.1, 11</td>
-<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+<td class="gt_row gt_center" headers="estimate">2.5</td>
+<td class="gt_row gt_center" headers="conf.low">-1.9, 6.9</td>
+<td class="gt_row gt_center" headers="p.value">0.3</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">edad</td>
-<td class="gt_row gt_center" headers="estimate">-0.15</td>
-<td class="gt_row gt_center" headers="conf.low">-0.27, -0.03</td>
-<td class="gt_row gt_center" headers="p.value">0.018</td>
+<td class="gt_row gt_center" headers="estimate">-0.24</td>
+<td class="gt_row gt_center" headers="conf.low">-0.34, -0.13</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">educa</td>
-<td class="gt_row gt_center" headers="estimate"><br>
-</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ninguno</td>
-<td class="gt_row gt_center" headers="estimate">—</td>
-<td class="gt_row gt_center" headers="conf.low">—</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Bachillerato</td>
-<td class="gt_row gt_center" headers="estimate">1.7</td>
-<td class="gt_row gt_center" headers="conf.low">-3.5, 7.0</td>
-<td class="gt_row gt_center" headers="p.value">0.5</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Primaria</td>
-<td class="gt_row gt_center" headers="estimate">0.63</td>
-<td class="gt_row gt_center" headers="conf.low">-3.9, 5.2</td>
-<td class="gt_row gt_center" headers="p.value">0.8</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Técnico</td>
-<td class="gt_row gt_center" headers="estimate">5.3</td>
-<td class="gt_row gt_center" headers="conf.low">-2.6, 13</td>
-<td class="gt_row gt_center" headers="p.value">0.2</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Universitario</td>
-<td class="gt_row gt_center" headers="estimate">4.2</td>
-<td class="gt_row gt_center" headers="conf.low">-3.8, 12</td>
-<td class="gt_row gt_center" headers="p.value">0.3</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">convivi</td>
-<td class="gt_row gt_center" headers="estimate">-0.12</td>
-<td class="gt_row gt_center" headers="conf.low">-1.1, 0.87</td>
-<td class="gt_row gt_center" headers="p.value">0.8</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">civil</td>
-<td class="gt_row gt_center" headers="estimate"><br>
-</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Casado</td>
-<td class="gt_row gt_center" headers="estimate">—</td>
-<td class="gt_row gt_center" headers="conf.low">—</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Separado</td>
-<td class="gt_row gt_center" headers="estimate">2.4</td>
-<td class="gt_row gt_center" headers="conf.low">-5.5, 10</td>
-<td class="gt_row gt_center" headers="p.value">0.6</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Soltero</td>
-<td class="gt_row gt_center" headers="estimate">4.0</td>
-<td class="gt_row gt_center" headers="conf.low">-0.54, 8.6</td>
-<td class="gt_row gt_center" headers="p.value">0.084</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unión libre</td>
-<td class="gt_row gt_center" headers="estimate">5.9</td>
-<td class="gt_row gt_center" headers="conf.low">1.7, 10</td>
-<td class="gt_row gt_center" headers="p.value">0.006</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Viudo</td>
-<td class="gt_row gt_center" headers="estimate">-0.23</td>
-<td class="gt_row gt_center" headers="conf.low">-5.2, 4.7</td>
-<td class="gt_row gt_center" headers="p.value">&gt;0.9</td>
-</tr>
-<tr class="odd">
 <td class="gt_row gt_left" headers="label">genero</td>
 <td class="gt_row gt_center" headers="estimate"><br>
 </td>
@@ -5790,40 +5705,30 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Masculino</td>
 <td class="gt_row gt_center" headers="estimate">—</td>
 <td class="gt_row gt_center" headers="conf.low">—</td>
 <td class="gt_row gt_center" headers="p.value"><br>
 </td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Femenino</td>
-<td class="gt_row gt_center" headers="estimate">3.3</td>
-<td class="gt_row gt_center" headers="conf.low">-0.01, 6.6</td>
-<td class="gt_row gt_center" headers="p.value">0.051</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">procede</td>
-<td class="gt_row gt_center" headers="estimate"><br>
-</td>
-<td class="gt_row gt_center" headers="conf.low"><br>
-</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
+<td class="gt_row gt_center" headers="estimate">3.0</td>
+<td class="gt_row gt_center" headers="conf.low">-0.06, 6.1</td>
+<td class="gt_row gt_center" headers="p.value">0.055</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Urbana</td>
-<td class="gt_row gt_center" headers="estimate">—</td>
-<td class="gt_row gt_center" headers="conf.low">—</td>
-<td class="gt_row gt_center" headers="p.value"><br>
-</td>
+<td class="gt_row gt_left" headers="label">karno</td>
+<td class="gt_row gt_center" headers="estimate">-0.17</td>
+<td class="gt_row gt_center" headers="conf.low">-0.28, -0.06</td>
+<td class="gt_row gt_center" headers="p.value">0.002</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Rural</td>
-<td class="gt_row gt_center" headers="estimate">0.35</td>
-<td class="gt_row gt_center" headers="conf.low">-3.1, 3.8</td>
-<td class="gt_row gt_center" headers="p.value">0.8</td>
+<td class="gt_row gt_left" headers="label">charlson</td>
+<td class="gt_row gt_center" headers="estimate">2.0</td>
+<td class="gt_row gt_center" headers="conf.low">0.54, 3.5</td>
+<td class="gt_row gt_center" headers="p.value">0.007</td>
 </tr>
 </tbody><tfoot>
 <tr class="gt_sourcenotes odd">
@@ -5849,7 +5754,7 @@ F-statistic:  7.54 on 14 and 531 DF,  p-value: 1.524e-14</code></pre>
 
 AIC    |   AICc |    BIC |    R2 | R2 (adj.) |   RMSE |  Sigma
 --------------------------------------------------------------
-4724.1 | 4725.2 | 4793.0 | 0.166 |     0.144 | 17.777 | 18.026</code></pre>
+4698.8 | 4699.1 | 4733.3 | 0.180 |     0.171 | 17.626 | 17.740</code></pre>
 </div>
 </div>
 </section>
