@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control de Versiones con GitHub — Curso Breve</title>
+  <meta name="description" content="Curso breve en español sobre control de versiones para análisis de datos usando Git y GitHub." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+  HERO
+════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+
+    <div class="hero-badge">CURSO BREVE · GIT &amp; GITHUB</div>
+
+    <h1>Control de Versiones<br>para <span>Análisis de Datos</span></h1>
+
+    <p class="hero-desc">
+      Lleva estructura, transparencia y control a tu flujo de trabajo de
+      investigación con Git y GitHub. Aprende el flujo esencial y empieza
+      a aplicarlo en proyectos reales de inmediato.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-pdf" id="btnPdf">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Descargar como PDF
+      </button>
+      <a href="https://github.com" target="_blank" class="btn-secondary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.04c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.22 1.83 1.22 1.06 1.82 2.78 1.3 3.46 1 .1-.78.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.3.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.28-1.23 3.28-1.23.66 1.66.24 2.88.12 3.18.78.84 1.24 1.92 1.24 3.22 0 4.6-2.8 5.62-5.48 5.92.44.38.82 1.12.82 2.26v3.35c0 .32.2.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        Ver en GitHub
+      </a>
+    </div>
+
+    <div class="hero-skills">
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Entender control de versiones
+      </span>
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Flujo commit · push · pull
+      </span>
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Crear y clonar repositorios
+      </span>
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Ramas y pull requests
+      </span>
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        GitHub Desktop + Terminal
+      </span>
+      <span class="skill-pill">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Buenas prácticas reproducibles
+      </span>
+    </div>
+
+  </div>
+</header>
+
+<!-- ════════════════════════════════════
+  LAYOUT
+════════════════════════════════════ -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-title">Contenido del curso</div>
+      <ul class="nav-list">
+        <li><a href="#intro">     <span class="nav-num">00</span> Introducción</a></li>
+        <li><a href="#modulo-1">  <span class="nav-num">01</span> ¿Qué es control de versiones?</a></li>
+        <li><a href="#modulo-2">  <span class="nav-num">02</span> Configuración inicial</a></li>
+        <li><a href="#modulo-3">  <span class="nav-num">03</span> Flujo esencial</a></li>
+        <li><a href="#modulo-4">  <span class="nav-num">04</span> Repositorios</a></li>
+        <li><a href="#modulo-5">  <span class="nav-num">05</span> Colaboración</a></li>
+        <li><a href="#modulo-6">  <span class="nav-num">06</span> GitHub Desktop &amp; CLI</a></li>
+        <li><a href="#modulo-7">  <span class="nav-num">07</span> Buenas prácticas</a></li>
+        <li><a href="#resumen">   <span class="nav-num">✓</span>  Resumen</a></li>
+      </ul>
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Progreso</span>
+          <span class="progress-pct">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <!-- ── INTRO ─────────────────────────────────────────── -->
+    <section class="module visible" id="intro">
+      <div class="module-header">
+        <span class="module-num">INTRO</span>
+        <div class="module-title-wrap">
+          <h2>Bienvenido al Curso</h2>
+          <p>7 módulos · Git &amp; GitHub · Español</p>
+        </div>
+      </div>
+
+      <p>
+        Git te ayuda a <strong>rastrear cambios</strong>, evitar pérdidas de trabajo y
+        colaborar de forma más efectiva. En este curso breve aprenderás el flujo de trabajo
+        central de Git y GitHub, y cómo empezar a aplicarlo a proyectos reales de análisis
+        de datos de inmediato.
+      </p>
+      <p style="font-style:italic; color: var(--muted);">
+        Se te anima a traer un proyecto que te gustaría empezar a organizar con control de versiones.
+      </p>
+
+      <div class="modules-grid">
+        <a class="module-card" href="#modulo-1">
+          <div class="mc-num">MÓDULO 01</div>
+          <div class="mc-title">¿Qué es el control de versiones?</div>
+          <div class="mc-desc">Git vs GitHub, conceptos clave y cuándo usarlo</div>
+        </a>
+        <a class="module-card" href="#modulo-2">
+          <div class="mc-num">MÓDULO 02</div>
+          <div class="mc-title">Configuración inicial</div>
+          <div class="mc-desc">Instalación, identidad y autenticación</div>
+        </a>
+        <a class="module-card" href="#modulo-3">
+          <div class="mc-num">MÓDULO 03</div>
+          <div class="mc-title">El flujo esencial</div>
+          <div class="mc-desc">commit → push → pull con ejemplos reales</div>
+        </a>
+        <a class="module-card" href="#modulo-4">
+          <div class="mc-num">MÓDULO 04</div>
+          <div class="mc-title">Repositorios</div>
+          <div class="mc-desc">Crear, clonar, .gitignore y README</div>
+        </a>
+        <a class="module-card" href="#modulo-5">
+          <div class="mc-num">MÓDULO 05</div>
+          <div class="mc-title">Colaboración</div>
+          <div class="mc-desc">Ramas, pull requests y conflictos</div>
+        </a>
+        <a class="module-card" href="#modulo-6">
+          <div class="mc-num">MÓDULO 06</div>
+          <div class="mc-title">GitHub Desktop &amp; Terminal</div>
+          <div class="mc-desc">Referencia rápida de comandos y GUI</div>
+        </a>
+        <a class="module-card" href="#modulo-7">
+          <div class="mc-num">MÓDULO 07</div>
+          <div class="mc-title">Buenas prácticas</div>
+          <div class="mc-desc">Estructura, checklist de reproducibilidad</div>
+        </a>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 1 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-1">
+      <div class="module-header">
+        <span class="module-num">MOD 01</span>
+        <div class="module-title-wrap">
+          <h2>¿Qué es el Control de Versiones?</h2>
+          <p>El problema que resuelve, Git, GitHub y cuándo usarlo</p>
+        </div>
+      </div>
+
+      <h3>El problema que resuelve</h3>
+      <p>¿Alguna vez has tenido archivos como estos en tu carpeta?</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">CARPETA DEL PROYECTO</span>
+        </div>
+        <pre><span class="path">analisis_final.R</span>
+<span class="path">analisis_final_v2.R</span>
+<span class="path">analisis_final_ESTE_SÍ.R</span>
+<span class="path">analisis_DEFINITIVO_revisado_2.R</span>
+<span class="path">analisis_para_entregar_CORRECTO_FINAL.R</span></pre>
+      </div>
+
+      <p>
+        El control de versiones elimina este caos. Con Git, cada cambio queda
+        registrado automáticamente con fecha, autor y descripción. Puedes volver
+        a cualquier versión anterior en cualquier momento.
+      </p>
+
+      <h3>¿Qué es Git?</h3>
+      <p>
+        Git es un sistema de control de versiones distribuido, creado por
+        Linus Torvalds en 2005. Funciona <strong>localmente en tu computadora</strong>
+        y lleva un historial completo de todos los cambios de tu proyecto.
+      </p>
+
+      <div class="info-box tip">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Conceptos clave de Git
+        </div>
+        <p><strong>Repositorio (repo):</strong> carpeta del proyecto con todo su historial de cambios.</p>
+        <p><strong>Commit:</strong> una "foto" del estado del proyecto en un momento dado.</p>
+        <p><strong>Branch (rama):</strong> una versión paralela para trabajar sin afectar la principal.</p>
+        <p><strong>Merge:</strong> combinar los cambios de una rama con otra.</p>
+      </div>
+
+      <h3>¿Qué es GitHub?</h3>
+      <p>
+        GitHub es una plataforma en la nube que aloja repositorios Git. Agrega
+        herramientas de colaboración: revisión de código, seguimiento de tareas,
+        documentación y más.
+      </p>
+
+      <div class="info-box rule">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="16" x2="11" y2="16"/></svg>
+          Git vs. GitHub — La diferencia clave
+        </div>
+        <p><strong>Git:</strong> la herramienta local que gestiona el historial de cambios.</p>
+        <p><strong>GitHub:</strong> el servicio en línea que almacena y comparte tu repositorio.</p>
+        <p><em>Analogía: Git es como el sistema de guardado; GitHub es la nube donde sincronizas.</em></p>
+      </div>
+
+      <h3>¿Cuándo usar control de versiones?</h3>
+      <ul>
+        <li>Proyectos de análisis de datos con código (R, Python, SQL, etc.)</li>
+        <li>Documentos técnicos que evolucionan con el tiempo</li>
+        <li>Proyectos colaborativos con más de una persona</li>
+        <li>Cualquier trabajo que quieras reproducir o auditar en el futuro</li>
+      </ul>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 2 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-2">
+      <div class="module-header">
+        <span class="module-num">MOD 02</span>
+        <div class="module-title-wrap">
+          <h2>Configuración Inicial</h2>
+          <p>Instalación, identidad en Git y autenticación con GitHub</p>
+        </div>
+      </div>
+
+      <h3>Instalación</h3>
+      <p>Antes de empezar necesitas instalar Git y crear una cuenta en GitHub.</p>
+      <ol>
+        <li>Descarga Git desde: <code>https://git-scm.com/downloads</code></li>
+        <li>Crea una cuenta gratuita en: <code>https://github.com</code></li>
+        <li>Descarga GitHub Desktop desde: <code>https://desktop.github.com</code></li>
+      </ol>
+
+      <h3>Configuración básica (Terminal)</h3>
+      <p>
+        Abre la terminal (o <strong>Git Bash</strong> en Windows) y configura
+        tu identidad. Solo necesitas hacer esto una vez:
+      </p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">TERMINAL</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="comment"># Configura tu nombre y correo globalmente</span>
+<span class="cmd">git config</span> <span class="flag">--global</span> user.name  <span class="str">"Tu Nombre"</span>
+<span class="cmd">git config</span> <span class="flag">--global</span> user.email <span class="str">"tu@email.com"</span>
+
+<span class="comment"># Verifica la configuración</span>
+<span class="cmd">git config</span> <span class="flag">--list</span></pre>
+      </div>
+
+      <h3>Autenticación con GitHub</h3>
+      <p>
+        La forma más sencilla es usar <strong>GitHub Desktop</strong>, que maneja
+        la autenticación automáticamente al iniciar sesión. Si prefieres la terminal:
+      </p>
+      <ul>
+        <li>Crea un <strong>token de acceso personal</strong> en: GitHub → Settings → Developer settings → Personal access tokens</li>
+        <li>Usa ese token como contraseña cuando Git lo solicite en la terminal.</li>
+      </ul>
+
+      <div class="info-box warning">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Nunca compartas tu token
+        </div>
+        <p>Trata tu token de acceso personal como una contraseña. Nunca lo incluyas en el código ni lo subas a un repositorio público.</p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 3 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-3">
+      <div class="module-header">
+        <span class="module-num">MOD 03</span>
+        <div class="module-title-wrap">
+          <h2>El Flujo de Trabajo Esencial</h2>
+          <p>commit · push · pull — el ciclo que usarás todos los días</p>
+        </div>
+      </div>
+
+      <p>
+        El ciclo básico de Git se resume en tres acciones: <strong>modificar</strong>
+        archivos, <strong>registrar</strong> los cambios (commit) y
+        <strong>sincronizar</strong> con GitHub (push/pull).
+      </p>
+
+      <h3>Referencia de comandos esenciales</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Comando</th>
+              <th>¿Qué hace?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>git add</td><td>Selecciona los archivos que quieres incluir en el próximo commit</td></tr>
+            <tr><td>git commit</td><td>Guarda una "foto" de los cambios con un mensaje descriptivo</td></tr>
+            <tr><td>git push</td><td>Sube los commits locales a GitHub (repositorio remoto)</td></tr>
+            <tr><td>git pull</td><td>Descarga y aplica los cambios del repositorio remoto</td></tr>
+            <tr><td>git status</td><td>Muestra el estado actual: qué ha cambiado y qué está listo para commit</td></tr>
+            <tr><td>git log</td><td>Muestra el historial de commits</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ejemplo práctico paso a paso</h3>
+      <p>Supón que modificaste tu script de análisis. Así registrarías los cambios:</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">TERMINAL</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="comment"># 1. Ver qué archivos cambiaron</span>
+<span class="cmd">git status</span>
+
+<span class="comment"># 2. Agregar archivos específicos al staging area</span>
+<span class="cmd">git add</span> analisis.R
+
+<span class="comment"># 2b. O agregar TODOS los cambios de una vez</span>
+<span class="cmd">git add</span> .
+
+<span class="comment"># 3. Crear el commit con un mensaje claro</span>
+<span class="cmd">git commit</span> <span class="flag">-m</span> <span class="str">"Agrego limpieza de valores nulos en columna edad"</span>
+
+<span class="comment"># 4. Subir a GitHub</span>
+<span class="cmd">git push</span> origin main</pre>
+      </div>
+
+      <div class="info-box tip">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Regla de oro para los mensajes de commit
+        </div>
+        <p>Usa el <strong>imperativo presente</strong>: "Agrego", "Corrijo", "Actualizo" — no "Agregué" o "Se actualizó".</p>
+        <p>Sé específico: <em>"Corrijo error en cálculo de media por grupo"</em> es mejor que <em>"fix bug"</em>.</p>
+        <p>Mantén el mensaje en <strong>menos de 72 caracteres</strong>.</p>
+      </div>
+
+      <h3>Las tres zonas de Git</h3>
+      <ul>
+        <li><strong>Directorio de trabajo:</strong> donde editas tus archivos normalmente.</li>
+        <li><strong>Staging area (índice):</strong> zona de preparación donde seleccionas qué cambios incluir.</li>
+        <li><strong>Repositorio local:</strong> historial permanente de commits guardados en <code>.git/</code></li>
+      </ul>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 4 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-4">
+      <div class="module-header">
+        <span class="module-num">MOD 04</span>
+        <div class="module-title-wrap">
+          <h2>Repositorios — Crear, Clonar y Gestionar</h2>
+          <p>.gitignore, README y estructura del proyecto</p>
+        </div>
+      </div>
+
+      <h3>Crear un nuevo repositorio</h3>
+
+      <h4>Opción A — Desde GitHub (recomendado para empezar)</h4>
+      <ol>
+        <li>Ve a <code>github.com</code> y haz clic en <strong>New repository</strong></li>
+        <li>Asigna un nombre descriptivo (ej: <code>analisis-encuesta-2024</code>)</li>
+        <li>Agrega una descripción breve</li>
+        <li>Elige visibilidad: <span class="tag">Public</span> o <span class="tag blue">Private</span></li>
+        <li>Marca <strong>Add a README file</strong></li>
+        <li>Haz clic en <strong>Create repository</strong></li>
+        <li>Clona el repositorio a tu computadora (ver sección siguiente)</li>
+      </ol>
+
+      <h4>Opción B — Desde tu carpeta local (terminal)</h4>
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">TERMINAL</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="comment"># Navega a la carpeta del proyecto</span>
+<span class="cmd">cd</span> mi-proyecto
+
+<span class="comment"># Inicializa el repositorio Git</span>
+<span class="cmd">git init</span>
+
+<span class="comment"># Conecta con un repositorio remoto en GitHub</span>
+<span class="cmd">git remote add</span> origin https://github.com/tuusuario/mi-proyecto.git</pre>
+      </div>
+
+      <h3>Clonar un repositorio existente</h3>
+      <p>Clonar crea una copia local completa (con todo el historial) de un repositorio remoto:</p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">TERMINAL</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="cmd">git clone</span> https://github.com/tuusuario/nombre-repo.git</pre>
+      </div>
+
+      <p>Con <strong>GitHub Desktop:</strong> File → Clone repository → pega la URL o busca entre tus repos.</p>
+
+      <h3>El archivo .gitignore</h3>
+      <p>
+        Le dice a Git qué archivos <strong>no debe rastrear</strong>.
+        Es esencial para proyectos de datos para excluir datos crudos, credenciales y archivos temporales.
+      </p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">.GITIGNORE — PROYECTO DE DATOS</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="comment"># Datos crudos y archivos grandes</span>
+<span class="path">*.csv</span>
+<span class="path">*.xlsx</span>
+<span class="path">data/raw/</span>
+
+<span class="comment"># Credenciales y configuración local</span>
+<span class="path">.env</span>
+<span class="path">config_local.R</span>
+
+<span class="comment"># Archivos temporales del sistema</span>
+<span class="path">__pycache__/</span>
+<span class="path">.Rhistory</span>
+<span class="path">.DS_Store</span>
+<span class="path">*.log</span></pre>
+      </div>
+
+      <div class="info-box tip">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          ¿Qué sí versionar en proyectos de datos?
+        </div>
+        <p><strong>SÍ:</strong> scripts de código (.R, .py, .sql), documentación (.md), resultados resumidos, figuras generadas.</p>
+        <p><strong>NO:</strong> datos crudos pesados, datos sensibles o privados, archivos temporales del sistema.</p>
+        <p><em>Considera usar <strong>DVC</strong> (Data Version Control) para versionar datasets grandes.</em></p>
+      </div>
+
+      <h3>El archivo README.md</h3>
+      <p>El README es la primera página de tu repositorio. Un buen README incluye:</p>
+      <ul>
+        <li>Nombre y descripción del proyecto</li>
+        <li>Objetivo del análisis</li>
+        <li>Estructura de carpetas</li>
+        <li>Instrucciones de instalación y uso</li>
+        <li>Fuentes de datos utilizadas</li>
+        <li>Nombre del autor y fecha</li>
+      </ul>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 5 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-5">
+      <div class="module-header">
+        <span class="module-num">MOD 05</span>
+        <div class="module-title-wrap">
+          <h2>Colaboración — Ramas, Pull Requests y Conflictos</h2>
+          <p>El corazón de la colaboración en GitHub</p>
+        </div>
+      </div>
+
+      <h3>¿Qué es una rama (branch)?</h3>
+      <p>
+        Una rama es una línea independiente de desarrollo. Te permite
+        experimentar o trabajar en una nueva funcionalidad <strong>sin afectar
+        la versión principal</strong> del proyecto (rama <code>main</code>).
+      </p>
+
+      <div class="info-box tip">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          ¿Por qué usar ramas?
+        </div>
+        <p>Trabajar en características nuevas sin romper el código que funciona.</p>
+        <p>Revisar el trabajo de un colaborador antes de integrarlo.</p>
+        <p>Mantener versiones estables del análisis mientras se experimenta.</p>
+      </div>
+
+      <h3>Trabajar con ramas</h3>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">TERMINAL</span>
+          <button class="code-copy">Copiar</button>
+        </div>
+        <pre><span class="comment"># Ver todas las ramas</span>
+<span class="cmd">git branch</span>
+
+<span class="comment"># Crear una nueva rama</span>
+<span class="cmd">git branch</span> nueva-funcion
+
+<span class="comment"># Cambiar a esa rama</span>
+<span class="cmd">git checkout</span> nueva-funcion
+
+<span class="comment"># Crear y cambiar en un solo comando (forma recomendada)</span>
+<span class="cmd">git checkout</span> <span class="flag">-b</span> nueva-funcion
+
+<span class="comment"># Volver a la rama principal</span>
+<span class="cmd">git checkout</span> main
+
+<span class="comment"># Fusionar los cambios de nueva-funcion en main</span>
+<span class="cmd">git merge</span> nueva-funcion</pre>
+      </div>
+
+      <h3>Pull Requests (PR)</h3>
+      <p>
+        Un Pull Request es la forma formal de proponer que tus cambios
+        (de una rama) se integren a la rama principal. Es el núcleo de
+        la colaboración en GitHub.
+      </p>
+      <ol>
+        <li>Crea una rama y sube tus cambios con <code>git push</code></li>
+        <li>Ve a GitHub y haz clic en <strong>"Compare &amp; pull request"</strong></li>
+        <li>Escribe una descripción clara de los cambios realizados</li>
+        <li>Asigna revisores si es un proyecto colaborativo</li>
+        <li>Una vez aprobado, haz clic en <strong>"Merge pull request"</strong></li>
+      </ol>
+
+      <h3>Resolución de conflictos</h3>
+      <p>
+        Un conflicto ocurre cuando dos personas modifican la misma parte de
+        un archivo y Git no puede decidir automáticamente cuál versión conservar.
+        Git marcará los conflictos así:
+      </p>
+
+      <div class="code-block">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <span class="code-lang">ARCHIVO CON CONFLICTO</span>
+        </div>
+        <pre><span class="conflict-mine">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<span class="conflict-mine">resultado &lt;- mean(datos$edad, na.rm = TRUE)</span>
+<span class="conflict-sep">=======</span>
+<span class="conflict-theirs">resultado &lt;- median(datos$edad, na.rm = TRUE)</span>
+<span class="conflict-theirs">&gt;&gt;&gt;&gt;&gt;&gt;&gt; rama-colaborador</span></pre>
+      </div>
+
+      <p>
+        Para resolver: edita el archivo manualmente dejando solo la versión
+        correcta (o combinando ambas), luego haz <code>git add</code> y
+        <code>git commit</code>.
+      </p>
+
+      <div class="info-box warning">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Consejos para evitar conflictos
+        </div>
+        <p>Haz <code>git pull</code> frecuentemente para mantenerte actualizado.</p>
+        <p>Divide el trabajo en archivos o secciones distintas con tu equipo.</p>
+        <p>Usa ramas cortas: crea, trabaja y fusiona rápido.</p>
+        <p>Comunica con tu equipo qué archivos está modificando cada quien.</p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 6 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-6">
+      <div class="module-header">
+        <span class="module-num">MOD 06</span>
+        <div class="module-title-wrap">
+          <h2>GitHub Desktop y Línea de Comandos</h2>
+          <p>GUI para empezar · Terminal para mayor control</p>
+        </div>
+      </div>
+
+      <h3>GitHub Desktop</h3>
+      <p>
+        GitHub Desktop es la interfaz gráfica oficial de GitHub. Facilita
+        el uso de Git sin necesidad de recordar todos los comandos. Ideal
+        para comenzar.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Acción</th><th>En GitHub Desktop</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Clonar un repo</td><td>File → Clone Repository</td></tr>
+            <tr><td>Ver cambios</td><td>Panel izquierdo muestra archivos modificados</td></tr>
+            <tr><td>Hacer un commit</td><td>Escribir mensaje y clic en "Commit to main"</td></tr>
+            <tr><td>Push / Pull</td><td>Botón "Push origin" / "Fetch origin" en la barra superior</td></tr>
+            <tr><td>Crear una rama</td><td>Branch → New Branch</td></tr>
+            <tr><td>Cambiar de rama</td><td>Menú "Current Branch" en la barra superior</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Referencia rápida de comandos</h3>
+      <p>
+        A medida que te sientas más cómodo, la terminal te da más control
+        y velocidad. Aquí los comandos que usarás con más frecuencia:
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Comando</th><th>Descripción</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>git init</td><td>Inicializar repositorio en carpeta actual</td></tr>
+            <tr><td>git clone &lt;url&gt;</td><td>Clonar repositorio remoto a tu computadora</td></tr>
+            <tr><td>git status</td><td>Ver el estado actual de archivos</td></tr>
+            <tr><td>git add &lt;archivo&gt;</td><td>Agregar archivo específico al staging</td></tr>
+            <tr><td>git add .</td><td>Agregar todos los cambios al staging</td></tr>
+            <tr><td>git commit -m 'msg'</td><td>Crear commit con mensaje descriptivo</td></tr>
+            <tr><td>git push</td><td>Subir commits locales a GitHub</td></tr>
+            <tr><td>git pull</td><td>Descargar cambios de GitHub</td></tr>
+            <tr><td>git log --oneline</td><td>Historial resumido de commits</td></tr>
+            <tr><td>git diff</td><td>Ver diferencias no confirmadas</td></tr>
+            <tr><td>git branch</td><td>Listar ramas disponibles</td></tr>
+            <tr><td>git checkout -b rama</td><td>Crear y cambiar a nueva rama</td></tr>
+            <tr><td>git merge rama</td><td>Fusionar rama en la rama actual</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── MÓDULO 7 ──────────────────────────────────────── -->
+    <section class="module" id="modulo-7">
+      <div class="module-header">
+        <span class="module-num">MOD 07</span>
+        <div class="module-title-wrap">
+          <h2>Buenas Prácticas para Proyectos de Datos</h2>
+          <p>Estructura, flujo recomendado y checklist de reproducibilidad</p>
+        </div>
+      </div>
+
+      <h3>Estructura de carpetas recomendada</h3>
+      <p>
+        Una estructura clara hace que tu repositorio sea fácil de entender
+        para colaboradores — y para ti mismo en el futuro.
+      </p>
+
+      <div class="folder-tree">
+<span class="dir">mi-proyecto/</span>
+├── <span class="important">README.md</span>          <span class="comment-f"># Descripción del proyecto</span>
+├── <span class="important">.gitignore</span>         <span class="comment-f"># Archivos a ignorar</span>
+├── <span class="dir">data/</span>
+│   ├── <span class="ignored">raw/</span>           <span class="comment-f"># Datos originales (en .gitignore)</span>
+│   └── <span class="dir">processed/</span>     <span class="comment-f"># Datos limpios y transformados</span>
+├── <span class="dir">scripts/</span>           <span class="comment-f"># Código de análisis (.R, .py)</span>
+├── <span class="dir">notebooks/</span>         <span class="comment-f"># Jupyter o RMarkdown</span>
+├── <span class="dir">outputs/</span>
+│   ├── <span class="dir">figures/</span>       <span class="comment-f"># Gráficos generados</span>
+│   └── <span class="dir">tables/</span>        <span class="comment-f"># Tablas de resultados</span>
+└── <span class="dir">docs/</span>              <span class="comment-f"># Documentación adicional</span>
+      </div>
+
+      <h3>Flujo de trabajo recomendado</h3>
+      <ol>
+        <li><strong>Antes de empezar:</strong> haz <code>git pull</code> para obtener los cambios más recientes.</li>
+        <li>Crea una <strong>rama</strong> para cada tarea o análisis nuevo.</li>
+        <li>Haz commits <strong>pequeños y frecuentes</strong> con mensajes descriptivos.</li>
+        <li>Al terminar: <code>git push</code> y crea un <strong>Pull Request</strong> para revisión.</li>
+        <li>Mantén el <strong>README actualizado</strong> con cada cambio importante.</li>
+      </ol>
+
+      <h3>Checklist de reproducibilidad</h3>
+      <ul class="checklist">
+        <li><span class="check-icon">✓</span> El código corre de principio a fin sin intervención manual.</li>
+        <li><span class="check-icon">✓</span> Las rutas de archivos son relativas, no absolutas.</li>
+        <li><span class="check-icon">✓</span> Las dependencias y versiones de paquetes están documentadas (<code>requirements.txt</code>, <code>renv.lock</code>, etc.).</li>
+        <li><span class="check-icon">✓</span> Los datos crudos están descritos aunque no estén en el repositorio.</li>
+        <li><span class="check-icon">✓</span> Hay un script principal (<code>main.R</code>, <code>run_analysis.py</code>) que ejecuta todo el pipeline.</li>
+        <li><span class="check-icon">✓</span> El README explica cómo reproducir el análisis desde cero.</li>
+      </ul>
+
+      <div class="info-box rule">
+        <div class="info-box-title">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="16" x2="11" y2="16"/></svg>
+          Herramientas complementarias
+        </div>
+        <p><strong>renv (R):</strong> para gestionar versiones de paquetes en proyectos de R.</p>
+        <p><strong>conda / venv (Python):</strong> para entornos virtuales reproducibles.</p>
+        <p><strong>DVC:</strong> Data Version Control — para versionar datasets grandes con Git.</p>
+        <p><strong>GitHub Actions:</strong> para automatizar tareas como ejecutar pruebas o generar reportes.</p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── RESUMEN ────────────────────────────────────────── -->
+    <section class="module" id="resumen">
+      <div class="module-header">
+        <span class="module-num">✓ FIN</span>
+        <div class="module-title-wrap">
+          <h2>Resumen del Curso</h2>
+          <p>Lo que aprendiste · Próximos pasos</p>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Módulo</th><th>Concepto clave</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>El control de versiones elimina el caos de múltiples copias de archivos.</td></tr>
+            <tr><td>02</td><td>Configura Git con tu nombre y email; usa GitHub Desktop para comenzar fácil.</td></tr>
+            <tr><td>03</td><td>El ciclo básico es: modificar → add → commit → push.</td></tr>
+            <tr><td>04</td><td>Usa .gitignore para excluir datos crudos; documenta todo con README.md.</td></tr>
+            <tr><td>05</td><td>Las ramas y Pull Requests son el corazón de la colaboración.</td></tr>
+            <tr><td>06</td><td>GitHub Desktop para empezar; la terminal para mayor control y velocidad.</td></tr>
+            <tr><td>07</td><td>Una buena estructura y commits frecuentes hacen tu trabajo reproducible.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Próximos pasos</h3>
+      <ul>
+        <li>Empieza con un proyecto real: crea un repositorio para tu análisis actual.</li>
+        <li>Practica hacer al menos <strong>un commit por sesión</strong> de trabajo.</li>
+        <li>Explora <strong>GitHub Pages</strong> para publicar reportes de análisis como sitios web.</li>
+        <li>Consulta el libro gratuito <strong>Pro Git</strong> en <code>progit.org</code></li>
+        <li>Practica en los cursos interactivos de <strong>GitHub Skills</strong> en <code>skills.github.com</code></li>
+      </ul>
+
+      <div style="text-align:center; margin-top: 48px; padding: 40px; background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        <div style="font-size: 2.2rem; margin-bottom: 12px;">🎉</div>
+        <p style="font-weight: 700; font-size: 1.2rem; color: var(--teal); margin-bottom: 8px;">¡Felicitaciones por completar el curso!</p>
+        <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Con estas herramientas tu flujo de trabajo será más organizado, transparente y reproducible.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ════════════════════════════════════
+  FOOTER
+════════════════════════════════════ -->
+<footer>
+  <p>
+    Control de Versiones con Git &amp; GitHub — Curso Breve en Español &nbsp;·&nbsp;
+    Hecho con ♥ para estudiantes &nbsp;·&nbsp;
+    <a href="https://git-scm.com/book/es/v2" target="_blank">Pro Git (ES)</a> &nbsp;·&nbsp;
+    <a href="https://skills.github.com" target="_blank">GitHub Skills</a>
+  </p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrollTop" title="Volver arriba">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
