@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Anestesiología - Universidad del Cauca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-unicauca: #003876;
+            --rojo-unicauca: #C8102E;
+            --azul-claro: #0056b3;
+            --gris-texto: #333;
+            --gris-claro: #f5f5f5;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--gris-texto);
+            background-color: var(--blanco);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--azul-unicauca) 0%, var(--azul-claro) 100%);
+            color: var(--blanco);
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle a {
+            color: var(--blanco);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            transition: border-color 0.3s;
+        }
+
+        .subtitle a:hover {
+            border-bottom-color: var(--blanco);
+        }
+
+        /* Intro */
+        .intro {
+            background-color: var(--gris-claro);
+            padding: 2rem 1rem;
+            border-left: 4px solid var(--rojo-unicauca);
+        }
+
+        .intro p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--azul-unicauca);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--rojo-unicauca);
+        }
+
+        h3 {
+            color: var(--azul-claro);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h4 {
+            color: var(--gris-texto);
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Schedule Image */
+        .schedule-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Links */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--rojo-unicauca);
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--azul-unicauca);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--rojo-unicauca);
+            text-decoration: underline;
+        }
+
+        /* Cards for Programs */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .program-card {
+            background: var(--blanco);
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            border-top: 3px solid var(--azul-unicauca);
+        }
+
+        .program-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            border-top-color: var(--rojo-unicauca);
+        }
+
+        .program-card h4 {
+            color: var(--azul-unicauca);
+            margin-top: 0;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--gris-claro);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--azul-unicauca);
+            color: var(--blanco);
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--blanco);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--rojo-unicauca);
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--blanco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            header, .intro, main {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Utility Classes */
+        .mt-2 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 2rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Departamento de Anestesiología</h1>
+            <p class="subtitle">
+                <a href="https://facsalud.unicauca.edu.co/salud" target="_blank">Facultad de Ciencias de la Salud</a>, 
+                <a href="http://www.unicauca.edu.co" target="_blank">Universidad del Cauca</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+            <p>Este sitio web hace parte del Departamento de Anestesiología, Facultad de Ciencias de la Salud de la Universidad del Cauca. Su propósito es académico y de difusión de horarios, actividades, contenidos y materiales para la enseñanza de la especialidad a estudiantes de pregrado y postgrado de nuestra institución.</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Cronograma -->
+        <section id="cronograma">
+            <h2>Cronograma de Actividades Semanales del Departamento</h2>
+            <img src="https://lh3.googleusercontent.com/sitesv/APaQ0SThNDRCzdH3Vxm7xly2blr41hkRFVLIkJqnlZoEb1IQW0bnDJL7UxmYLy_zNz5mG45hRUljmFrknC0N9Q2A8gansE68Q4Km7RKzrPL7kXhwlKdkMcefuds8yObnlCCmAjTERSAB0KitACqi0AsMf-oS8hL4nrVE3ON2fdGVC2s-kbMyRHzjct-2bxEyxrsgPO2r6wImuHh7j-_NtSkp52jjdVmE_vIrfn38=w1280" 
+                 alt="Cronograma de actividades" 
+                 class="schedule-image">
+        </section>
+
+        <!-- Programas Académicos -->
+        <section id="programas">
+            <h2>Programas Académicos y Contenidos por Nivel de Formación</h2>
+
+            <!-- Pregrado -->
+            <h3>Pregrado</h3>
+
+            <h4>Curso Inicial - Introducción a la Medicina Perioperatoria</h4>
+            <p><strong>Objetivo general:</strong> Proporcionar a los participantes los fundamentos teóricos y prácticos de la Medicina Perioperatoria, fortaleciendo sus competencias para la evaluación, el manejo y la seguridad del paciente quirúrgico en las diferentes fases del proceso perioperatorio.</p>
+            
+            <ul>
+                <li><a href="https://drive.google.com/file/d/17zcr0heqhc-8bXnTl7Ca2BXSp27sXo4x/view?usp=drive_link" target="_blank">Programa general del curso 2026</a></li>
+                <li><a href="https://drive.google.com/drive/folders/14qhL-2AwThetGsIBsHun6QvZZUt26rA_?usp=sharing" target="_blank">Materiales de referencia para el curso</a></li>
+                <li><a href="https://drive.google.com/file/d/1upy_wYVnVIDHw7bEHKf9y4Us77cOPWqH/view" target="_blank">Contenidos y materiales de la rotación por Anestesiología</a></li>
+            </ul>
+
+            <h4>Internado</h4>
+            <ul>
+                <li><a href="https://docs.google.com/document/d/1L0eZ6L2p4TxsiYV0kad_zznakM9RkVC7/edit?usp=sharing&ouid=107152295222029826615&rtpof=true&sd=true" target="_blank">Programa académico de la rotación regular de internado por Anestesiología</a></li>
+                <li><a href="https://docs.google.com/document/d/1kDJusgViMmRfiWE_nv5N2m5rMiNcQWHs/edit?usp=sharing&ouid=107152295222029826615&rtpof=true&sd=true" target="_blank">Programa académico de la rotación electiva de internado por Anestesiología</a></li>
+                <li><a href="https://docs.google.com/document/d/1l4Sl2OPy9D9NDmGJ9CtWHV0gY5gQGWu1/edit?usp=sharing&ouid=107152295222029826615&rtpof=true&sd=true" target="_blank">Programa académico de la rotación electiva por Epidemiología Clínica con el Centro Afiliado Cochrane Universidad del Cauca</a></li>
+            </ul>
+
+            <h4>Documentos Adicionales y Disponibilidad de Asignaturas Electivas</h4>
+            <ul>
+                <li><a href="https://drive.google.com/drive/folders/1THlcIuLHAW4qQSueL_Q1cuQ9O-fciNOs?usp=sharing" target="_blank">Carpeta de documentos adicionales para consulta</a></li>
+            </ul>
+
+            <!-- Especialización -->
+            <h3>Rotaciones del Programa de Especialización en Anestesiología</h3>
+
+            <div class="program-grid">
+                <!-- Primer Año -->
+                <div class="program-card">
+                    <h4>Primer Año</h4>
+                    <p><strong>Algesiología - Medicina del Dolor y Cuidados Paliativos</strong></p>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1US4kKs9xYnG7Jt1zfW6snDkgptWHKh3e/view" target="_blank">Programa de Medicina del Dolor para primer año</a></li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Materiales:</strong></p>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1P-ukKJPzmlZtwI3GcNobivIobHHvNoMU/view" target="_blank">Physical examination of the patient with pain</a></li>
+                        <li><a href="https://drive.google.com/file/d/15IxkbyATiQVXjuAzsF8n2BtdI2QCLmyP/view" target="_blank">Bases fisiopatológicas del dolor</a></li>
+                        <li><a href="https://drive.google.com/file/d/1-dAaAJ53wwWRZ1vtfDLT6kLbGzr1uG5_/view" target="_blank">Tratamiento del dolor agudo</a></li>
+                        <li><a href="https://drive.google.com/file/d/1A7HayBv3XReYwLymMdmWT6ZJsOnjmX25/view" target="_blank">Acute postoperative pain</a></li>
+                        <li><a href="https://drive.google.com/file/d/1ldRq3xHsUa3tjaXmMFewDMSv-qEbUN4B/view" target="_blank">Acute pain management</a></li>
+                        <li><a href="https://drive.google.com/file/d/12jRQd0SNOK67StQJBj8h-gXVSEKNpHJN/view" target="_blank">Neuropathic pain</a></li>
+                    </ul>
+                </div>
+
+                <!-- Segundo Año -->
+                <div class="program-card">
+                    <h4>Segundo Año</h4>
+                    <p><strong>Algesiología - Medicina del Dolor y Cuidados Paliativos</strong></p>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/11H8GrnhnoxzO6pUJaN8vOq7B1n0Q42uW/view" target="_blank">Programa de Medicina del Dolor para segundo año</a></li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Materiales:</strong></p>
+                    <ul>
+                        <li><a href="https://drive.google.com/file/d/1j0IKsM-FQ81rdw4frlKhGy4C9aCFijbA/view" target="_blank">Treatment of chronic non-cancer pain</a></li>
+                        <li><a href="https://drive.google.com/file/d/1nnLwob9-t2KUGA6a4YLO11rT4gZQ9qkj/view" target="_blank">Treatment of cancer pain</a></li>
+                        <li><a href="https://drive.google.com/file/d/1BWYlWsfacETWWmi6aKPvU5LvVLmZExi2/view" target="_blank">Tratamiento del dolor crónico</a></li>
+                        <li><a href="https://drive.google.com/file/d/1BLqdrSbE7rr9x40MJYRUxrfyu6x6p1E7/view" target="_blank">Management of chronic low back pain</a></li>
+                        <li><a href="https://drive.google.com/file/d/1YjJBC-lm4S6RymwuatrYE89KhDxwNX8y/view" target="_blank">Systemic Pharmacologic Therapies for Low Back Pain: ACP Guideline</a></li>
+                        <li><a href="https://drive.google.com/file/d/1WPBmH2Q-N3Xl5oEfY0S1qEKQTl2DSNP9/view" target="_blank">Management of low back pain</a></li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>Recursos adicionales:</strong></p>
+                    <ul>
+                        <li><a href="https://drive.google.com/drive/folders/1Y8y5mpvqCWLGrxZhaTYoNFNHbi8JcYop?usp=sharing" target="_blank">Guías de atención Servicio de Medicina del Dolor, Hospital Universitario San José</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/15_mZ7pK3-ebh_1TMJPH7z2oKfYnpivPD?usp=sharing" target="_blank">Otros materiales complementarios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investigación -->
+        <section id="investigacion">
+            <h2>Procesos de Investigación del Departamento</h2>
+            <ul>
+                <li><a href="https://sites.google.com/unicauca.edu.co/epiclin/quienes-somos/anestesiolog%C3%ADa-y-reanimaci%C3%B3n" target="_blank">Grupo de investigación en Anestesiología GRIAN</a></li>
+                <li><a href="https://sites.google.com/unicauca.edu.co/epiclin" target="_blank">Centro Afiliado Cochrane, Universidad del Cauca - Unidad de Epidemiología Clínica EpiClin</a></li>
+                <li><a href="https://revistas.unicauca.edu.co/index.php/rfcs" target="_blank">Revista Facultad de Ciencias de la Salud de la Universidad del Cauca</a></li>
+            </ul>
+        </section>
+
+        <!-- Acerca del Departamento -->
+        <section id="acerca" class="about-section">
+            <h2>Acerca del Departamento</h2>
+            <p>La Universidad del Cauca viene formando especialistas en anestesiología hace más de treinta y cinco años los cuales se han convertido en soporte fundamental para el desarrollo asistencial y operativo en Instituciones de Salud en nuestra región y a nivel nacional. La especialización en Anestesia se enfoca en el manejo integral perioperatorio de paciente quirúrgico, del paciente que require estudios diagnósticos o terapéuticos especializados optimizando las condiciones médicas asociadas que lo ameriten, brindando la máxima seguridad y protección al paciente.</p>
+
+            <p>El Departamento de Anestesia de la Universidad del Cauca ha incursionado no solamente en el campo de la asistencia sino en lo administrativo, lo gremial y en lo investigativo aportando conocimiento y acciones para intervenir y modificar problemas en el área de la salud individual y colectiva de la población caucana y colombiana.</p>
+
+            <p>Actualmente el equipo humano del Departamento de Anestesiología está compuesto por anestesiólogas y anestesiólogos en su gran mayoría egresados del programa, con formación subespecializada en diversas disciplinas entre las que se encuentran: Dolor Agudo y Anestesia Regional, Manejo de la Vía Aérea, Anestesia Cardiovascular, Cuidados Intensivos, Epidemiología Clínica y Bioestadística, Medicina del Dolor y Cuidados Paliativos, Educación Médica, Anestesia de Trasplantes, entre otras.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h3>Departamento de Anestesiología</h3>
+                <p>Universidad del Cauca</p>
+                <p>Carrera 5 # 13N – 36</p>
+                <p>Popayán, Cauca, Colombia</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Secretaría de Departamento</p>
+                <p><a href="mailto:dptoanestesia@unicauca.edu.co">dptoanestesia@unicauca.edu.co</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces de Interés</h3>
+                <p><a href="https://facsalud.unicauca.edu.co/salud" target="_blank">Facultad de Ciencias de la Salud</a></p>
+                <p><a href="http://www.unicauca.edu.co" target="_blank">Universidad del Cauca</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
