@@ -1085,7 +1085,7 @@ function loadTheme(){
 // PERSISTENCE
 // ══════════════════════════════════════════════════════════════
 function stateObj(){
-  return{subjects:S,hourData,nid,weeks,electivas,elecSchedule,nElecId,mallaSchedule,elecTentative,nTentId,version:SCHEMA_VERSION};
+  return{subjects:S,hourData,nid,weeks,electivas,elecSchedule,nElecId,mallaSchedule,elecTentative,nTentId,compAssignments,version:SCHEMA_VERSION};
 }
 function applyState(data){
   S=data.subjects||DEFAULT_S.map(x=>({...x}));
@@ -1098,6 +1098,7 @@ function applyState(data){
   elecTentative=data.elecTentative||[];
   nTentId=data.nTentId||(elecTentative.length?Math.max(...elecTentative.map(t=>t.id))+1:1);
   mallaSchedule=data.mallaSchedule||{};
+  compAssignments=data.compAssignments||compAssignments||{};
   document.getElementById('weeksInput').value=weeks;
   S.forEach(x=>{if(!hourData[x.id])hourData[x.id]={docSem:null};});
   electivas.forEach(e=>{if(!hourData[e.id])hourData[e.id]={docSem:null};});
@@ -2354,8 +2355,9 @@ let compInclElec = true;
 let compActiveSems = new Set(['1','2','3','4','5','6','7','8','9','10','11','Int','E']);
 let compBarChart = null, compPieChart = null;
 let compExpandedDpto = null;
-let compAssignments = JSON.parse(localStorage.getItem('compAssignments')||'{}'); // {asig: targetDept}
-function compSaveAssignments(){ localStorage.setItem('compAssignments',JSON.stringify(compAssignments)); }
+let compAssignments = {};
+try{ compAssignments = JSON.parse(localStorage.getItem('compAssignments')||'{}'); }catch(e){}
+function compSaveAssignments(){ try{localStorage.setItem('compAssignments',JSON.stringify(compAssignments));}catch(e){} scheduleSave(); }
 
 // ── Helpers ───────────────────────────────────────────────────
 function compVal(row, metric){
@@ -3533,6 +3535,7 @@ function migrateState(state){
   if(!state.elecSchedule) { state.elecSchedule = {};changed = true; }
   if(!state.mallaSchedule){ state.mallaSchedule={};  changed = true; }
   if(!state.elecTentative){ state.elecTentative=[];  changed = true; }
+  if(!state.compAssignments){ state.compAssignments={}; changed = true; }
   if(!state.weeks)        { state.weeks = 16;       changed = true; }
 
   // ── D. Fix hourData to match reference file (v6) ───────────
