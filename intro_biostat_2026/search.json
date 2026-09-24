@@ -1,0 +1,112 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Syllabus. Introducción a la bioestadística e interpretación de datos en la literatura biomédica",
+    "section": "",
+    "text": "Prefacio\n\n\n\n\n\n\n\nFecha de inicio\nOctubre 6, 2:00 pm\n\n\nFecha de finalización\nNoviembre 10, 5:30 pm\n\n\nHorario\n2:00 - 5:30 pm\n\n\nUbicación\nSalon 105. Facultad de Ciencias de la Salud, Universidad del Cauca, Popayán\n\n\nCostos del curso\nAcceso libre\n\n\nNivel de formación\nBásico; Introductorio.\n\n\nPrerrequisitos\nFormación básica en epidemiología y diseños de investigación\n\n\nDisciplinas\nEpidemiología y estadística\n\n\nFecha de examen\nNoviembre 10, 5:00 pm",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introducción",
+    "section": "",
+    "text": "1.1 Descripción del curso\nEste es un curso con un énfasis en la interpretación de los resultados de investigación. El curso presenta los preceptos básicos y los principios subyacentes a los métodos primarios de análisis de datos epidemiológicos y métodos estadísticos. Su objetivo principal es que el participante alcance una conceptualización de los principios básicos del pensamiento científico, el análisis de datos epidemiológicos con énfasis en la interpretación de la literatura científica actual. Este curso es una introducción general a los conceptos básicos de estadística utilizados en aplicaciones biomédicas y de salud pública.\nComienza con una introducción general a la comprensión de la ciencia antes de cualquier estadística, destacando la diferencia entre descripción, causalidad y predicción como objetivos importantes en el análisis de datos. Introduce brevemente los diseños de investigación más relevantes, los objetivos del análisis y las preguntas de investigación apropiadas y presenta definiciones básicas en bioestadística.\nA continuación, el curso se enfoca en las formas de describir datos como tablas, gráficos, distribuciones y estadísticas resumidas (media, desviación estándar, mediana, cuartiles) tal como se informa en revistas médicas y de salud y describe las medidas de ocurrencia de enfermedad, de asociación y de riesgo. Revisaremos algunos de los procedimientos estadísticos más utilizados con énfasis en su interpretación, incluyendo conceptos de inferencia estadística, los contrastes de hipótesis, la estimación y el análisis de datos continuos, categóricos y de tiempo hasta la ocurrencia de un evento.\nFinalmente, introduce los conceptos de análisis estratificado y modelos multivariables, incluyendo la regresión lineal simple, regresión múltiple, regresión logística y el modelo de riesgos proporcionales de Cox, con un énfasis en su uso en la divulgación e interpretación de la literatura científica.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción</span>"
+    ]
+  },
+  {
+    "objectID": "objetivos.html",
+    "href": "objetivos.html",
+    "title": "2  Objetivos del curso",
+    "section": "",
+    "text": "2.1 Perfil del participante\nPersona interesada en los principios del análisis de datos epidemiológicos, incluyendo multiples profesiones de las áreas biomédicas o relacionadas. Se recomienda que los asistentes hayan completado un curso básico en diseño de estudios epidemiológicos. El objetivo principal del curso se centra en la interpretación más que en habilidades analíticas directas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Objetivos del curso</span>"
+    ]
+  },
+  {
+    "objectID": "contenidos.html",
+    "href": "contenidos.html",
+    "title": "3  Contenidos y calendario",
+    "section": "",
+    "text": "3.1 Contenidos generales",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Contenidos y calendario</span>"
+    ]
+  },
+  {
+    "objectID": "contenidos.html#contenidos-generales",
+    "href": "contenidos.html#contenidos-generales",
+    "title": "3  Contenidos y calendario",
+    "section": "",
+    "text": "Dia\nTemas\nLecturas y materiales\nFecha(s)\n\n\n\n\n1\n“Ciencia antes que estadística”\nLa pregunta y los diseños de investigación\nObjetivos generales del análisis de datos\nDescripción, causalidad y predicción\nCapítulos 1, 2 (Shoemaker and Delgado Noguera 2019)\nData collection (Pg 1 - 31) (“Understanding Data and Statistics in the Medical Literature”)\nTypes of scientific questions (Pg 53 - 72) (“Understanding Data and Statistics in the Medical Literature”)\nStudy design (Pg 40-41) (“Understanding Data and Statistics in the Medical Literature”)\nOctubre 6\n2:00 pm\n\n\n2\nDr. Julian Velasquez\nTipos de datos\nGráficos y descripción de datos\nMedidas de ocurrencia de enfermedad\nMedidas de asociación y efecto\nCapítulo 7, 8, 9 (Shoemaker and Delgado Noguera 2019)\nStatistical graphics (Pg 100-141) (“Understanding Data and Statistics in the Medical Literature”)\nMeasures of association (Pg 75-86) (“Understanding Data and Statistics in the Medical Literature”)\nOctubre 13\n2:00 pm\n\n\n3\nInferencia estadística\nEstimación y contrastes de hipótesis\nAnálisis de resultados continuos\nCapítulo 6 (Shoemaker and Delgado Noguera 2019)\nMeasures of association (Pg 87-92) (“Understanding Data and Statistics in the Medical Literature”)\nOctubre 20\n2:00 pm\n\n\n4\nAnálisis de resultados categóricos\nAnálisis estratificado\nMetanálisis\nCapítulo 15 (Shoemaker and Delgado Noguera 2019)\nMeasures of association (Pg 75-86) (“Understanding Data and Statistics in the Medical Literature”)\nStudy design (Pg 40-41) (“Understanding Data and Statistics in the Medical Literature”)\nOctubre 27\n2:00 pm\n\n\n5\nModelamiento estadístico\nAnálisis de datos de tiempo hasta el evento\nStatistical models (Pg 148-196) (“Understanding Data and Statistics in the Medical Literature”)\nNoviembre 3\n2:00 pm\n\n\n6\nUsos del modelamiento estadistico\nStatistical models (Pg 148-196) (“Understanding Data and Statistics in the Medical Literature”)\nNoviembre 10\n2:00 pm",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Contenidos y calendario</span>"
+    ]
+  },
+  {
+    "objectID": "contenidos.html#lecturas-obligatorias",
+    "href": "contenidos.html#lecturas-obligatorias",
+    "title": "3  Contenidos y calendario",
+    "section": "3.2 Lecturas obligatorias",
+    "text": "3.2 Lecturas obligatorias\n\nShoemaker R, Delgado Noguera MF. Fundamentos de epidemiología. 1st ed. Universidad del Cauca; 2019. (Shoemaker and Delgado Noguera 2019) (https://osf.io/xk76p/overview)\nOnline MOOC Course. Understanding data and statistics in the medical literature. (https://leanpub.com/universities/courses/jhu/udsml) (“Understanding Data and Statistics in the Medical Literature”)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Contenidos y calendario</span>"
+    ]
+  },
+  {
+    "objectID": "contenidos.html#lecturas-adicionales",
+    "href": "contenidos.html#lecturas-adicionales",
+    "title": "3  Contenidos y calendario",
+    "section": "3.3 Lecturas adicionales",
+    "text": "3.3 Lecturas adicionales\n\nOnline MOOC Course. Clinical Epidemiology | Coursera (https://www.coursera.org/learn/clinical-epidemiology) (“Clinical Epidemiology | Coursera”)\nRothman KJ. Epidemiology: An Introduction. 2nd ed. New York, NY: Oxford University Press; 2012. (Rothman 2012)\nKirkwood BR, Sterne JAC. Essential medical statistics. 2nd ed. Philadelphia, PA: Blackwell Science; 2003. (Kirkwood and Sterne 2003)\nBland M. An introduction to medical statistics. 4th ed. London, England: Oxford University Press; 2015. (Bland 2015)\n\n\n\n\n\nBland, Martin. 2015. An Introduction to Medical Statistics. 4th ed. London, England: Oxford University Press.\n\n\n“Clinical Epidemiology | Coursera.” https://www.coursera.org/learn/clinical-epidemiology.\n\n\nKirkwood, Betty R, and Jonathan A C Sterne. 2003. Essential Medical Statistics. 2nd ed. Essentials. Philadelphia, PA: Blackwell Science.\n\n\nRothman, Kenneth J. 2012. Epidemiology: An Introduction. 2nd ed. New York, NY: Oxford University Press.\n\n\nShoemaker, Richard, and Mario Francisco Delgado Noguera. 2019. Fundamentos de Epidemiología. 1st ed. Universidad del Cauca.\n\n\n“Understanding Data and Statistics in the Medical Literature.” https://leanpub.com/universities/courses/jhu/udsml.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Contenidos y calendario</span>"
+    ]
+  },
+  {
+    "objectID": "evaluacion.html",
+    "href": "evaluacion.html",
+    "title": "4  Métodos y evaluación",
+    "section": "",
+    "text": "4.1 Metodología del curso\nEl curso consta de conferencias, estudios de casos que involucran lectura y discusión en el salón de clases y tareas para sesiones futuras. Incluye múltiples ejemplos de lectura y análisis por los participantes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Métodos y evaluación</span>"
+    ]
+  },
+  {
+    "objectID": "evaluacion.html#evaluación-del-curso",
+    "href": "evaluacion.html#evaluación-del-curso",
+    "title": "4  Métodos y evaluación",
+    "section": "4.2 Evaluación del curso",
+    "text": "4.2 Evaluación del curso\nLa evaluación del curso se basa en las actividades propias del curso: interacción y participación activa (30%) y la aprobación de un examen final el último día de clases (70%).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Métodos y evaluación</span>"
+    ]
+  },
+  {
+    "objectID": "politicas.html",
+    "href": "politicas.html",
+    "title": "5  Políticas del curso",
+    "section": "",
+    "text": "Participación: Se espera que los estudiantes participen en todas las actividades presenciales que se mencionan en el calendario del curso.\nRelación académica: Si encuentra que tiene algún problema para mantenerse al día con las tareas u otros aspectos del curso, asegúrese de informar a su instructor lo antes posible.}\nTareas y actividades: Todas las tareas para este curso se enviarán electrónicamente a los participantes. Las asignaciones que se planifiquen deben enviarse antes de la fecha límite. No se otorgarán extensiones más allá de las fechas definidas, excepto en circunstancias extremas. Todas las asignaciones de discusión deben completarse antes de la fecha y hora de vencimiento de la asignación. Las asignaciones de discusión atrasadas o pérdidas reducirán la calificación del asistente.\nAbandono del curso y asignaciones: Es responsabilidad del estudiante comprender cuándo debe considerar retirarse de un curso. Consulte el calendario de cursos para conocer las fechas y los plazos de inscripción.\nCódigo de honestidad: La honestidad académica es un pilar fundamental de la comunidad universitaria; por lo tanto, se espera que los estudiantes entiendan los estándares de honestidad académica en lo que respecta al comportamiento de los estudiantes en el salón de clases.\nPlagio: Es importante que los estudiantes reconozcan las fuentes que se utilizan para completar las actividades que se puedan presentar durante el desarrollo del curso. El plagio es una forma de deshonestidad académica. El plagio puede presentarse de múltiples formas, entre ellas: 1) Copia textual sin la documentación adecuada de la(s) fuente(s), 2) Parafrasear sin la documentación adecuada de la(s) fuente(s), 3) Apropiación no reconocida de información o ideas de otra persona.\nSi los estudiantes tienen alguna pregunta sobre estas formas de plagio o sobre una actividad que se encuentren preparando, pueden pedir siempre una aclaración a su instructor en lugar de arriesgarse a un plagio involuntario.\nPolítica de inclusividad: Nos esforzamos por crear un ambiente de salón de clases inclusivo y acogedor para estudiantes de todas las razas, etnias, sexos, géneros, orientaciones sexuales, religiones, capacidad/discapacidad física y estado emocional. Si está experimentando acoso debido a cualquiera de estos problemas y desea hablar con el instructor de enseñanza, no dude en hacerlo; también podemos dirigirlo a recursos adicionales. Siéntase bienvenido a enviar un correo electrónico al instructor con sus pronombres y/o nombres preferidos. Los estudiantes que requieran adaptaciones adicionales para las pruebas debido a diferentes capacidades, comuníquese con su instructor.\nLas conferencias y cursos del Programa de Formación Integral en Metodología de la Investigación Biomédica tocan temas de raza, sexo/género, orientación sexual, identidad de género y otros temas. Como tal, sus instructores quieren expresar claramente: como personas es probable que cometamos algunos errores al hablar sobre raza, sexo, género y sexualidad (y sus intersecciones) en algún momento de mi vida. Espero que cuando lo haga, se sienta capacitado para darme su opinión sobre lo que no fue apropiado para usted y cómo podemos mejorar. Recibiremos esos comentarios con una mente abierta y gratitud, y con la menor actitud defensiva posible.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Políticas del curso</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Bland, Martin. 2015. An Introduction to Medical Statistics. 4th\ned. London, England: Oxford University Press.\n\n\n“Clinical Epidemiology | Coursera.” https://www.coursera.org/learn/clinical-epidemiology.\n\n\nKirkwood, Betty R, and Jonathan A C Sterne. 2003. Essential Medical\nStatistics. 2nd ed. Essentials. Philadelphia, PA: Blackwell\nScience.\n\n\nRothman, Kenneth J. 2012. Epidemiology: An Introduction. 2nd\ned. New York, NY: Oxford University Press.\n\n\nShoemaker, Richard, and Mario Francisco Delgado Noguera. 2019.\nFundamentos de Epidemiología. 1st ed. Universidad del Cauca.\n\n\n“Understanding Data and Statistics in the Medical\nLiterature.” https://leanpub.com/universities/courses/jhu/udsml.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
